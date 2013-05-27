@@ -37,13 +37,17 @@ Class var:          int wordLength
 Class var:          int tries
 
 
-Const Class var:    return
+Const Class var:    Array userInputStates
 
 Class var:          Array wordList
 
 Class var:          String currentWord
 
-Class var:          String cMonologue
+Class var:          String currentWordState = `"_A__B_"`
+
+Class var:          String usedLetters
+
+Class var:          String computerMonologue
 
 
 **Method:             initList()**
@@ -56,11 +60,26 @@ Class var:          String cMonologue
 
 **Method:             doUserInput(letter)**
 
-* // 
+* // already used
+* // invalid input
+* // wrong guess
+* // correct guess
 
 **Method:             getCurrentWord()**
 
-* // 
+* // gets the word that has been picked to play with
+
+**Method:             getCurrentWordState()**
+
+* // gets the state of the word (`"_A_BC_"`)
+
+**Method:             getUsedLetters()**
+
+* // gets the used letters 
+
+**Method:             getComputerMonologue()**
+
+* // gets current computer monologue switch that checks witch one to pick
 
 **Method:             reset()**
 
