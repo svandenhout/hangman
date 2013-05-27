@@ -19,20 +19,25 @@ Frameworks Languages & libraries
 Models
 ------
 
-- Hangman: a model that does all of the backend needed to play the game of hangman
-- hi scores: a model that makes a hightscore list and keeps track of the list
+- Hangman: a model that does all of the backend needed to play the game of hangman (class vars are saved local) also contains game settings
+- HiScores: a model that makes a hightscore list and saves it to the local memory
+- 
 
-Classes etc (code design)
--------------------------
+Model Classes (code design)
+---------------------------
 
-normal hangman
---------------
+Hangman
+-------
 
 **Class:              Hangman()**
 
+Class var:          String playerName
+
 Class var:          int wordLength
 
-Class var:          Array list
+Class var:          int tries
+
+Class var:          Array wordList
 
 Class var:          String currentWord
 
@@ -43,6 +48,10 @@ Class var:          String cMonologue
 
 * // sets the list array with all the possible words
 
+**Method:             settings()**
+
+* // sets all of the settings with standard settings or user preferences
+
 **Method:             setWord(wordLength)**
 
 * // picks a psuedo randomn word from the list by set length
@@ -51,8 +60,30 @@ Class var:          String cMonologue
 
 * // returns the guessed letter and place(s) in the string, return false when the guessed letter is not in the word
 
-evil hangman
-------------
+
+HiScores
+--------
+
+**Class:              HiScores**
+
+Class var:          ArrayList scores
+
+* // the constructor will retrieve the scores
+
+Class var:          Array top10
+
+**Method:             addScore()**
+
+* // adds a score to the scores arraylist
+
+**Method:             setTop10()**
+
+* // sets the top 10 from the scores list
+
+
+
+EvilHangman
+-----------
 
 **Class:              EvilHangman()**
 
