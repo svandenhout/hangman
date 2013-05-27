@@ -59,6 +59,9 @@ Class var:          String cMonologue
 
 * // returns the guessed letter and place(s) in the string, return false when the guessed letter is not in the word
 
+**Method:             reset()**
+
+* // resets the game
 
 HiScores
 --------
