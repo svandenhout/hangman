@@ -49,7 +49,7 @@ Class var:          String cMonologue
 
 **Method:             checkUserInput()**
 
-* // returns the guessed letter and place(s) in the string, false when the guessed letter is not in the word
+* // returns the guessed letter and place(s) in the string, return false when the guessed letter is not in the word
 
 evil hangman
 ------------
@@ -82,3 +82,9 @@ Images
 ------
 
 // coming soon
+
+
+Design doc
+----------
+
+https://moqups.com/svandenhout/RbfktZxW
