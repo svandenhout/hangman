@@ -31,19 +31,20 @@ normal hangman
 
 **Class:              EvilHangman()**
 
-* Class var:          Array list
-* Class var:          Array equivList
-* Class var:          String currentWord
-* Class var:          String cMonologue
+**Class var:          Array list**
+**Class var:          Array equivList**
+**Class var:          String currentWord**
+**Class var:          String cMonologue**
 
-// sets the list array with all the possible words
-Method:             getList()
+**Method:             getList()**
+* // sets the list array with all the possible words
 
-// sets the equivList array by checking for possibilities that are equivilant to the guess the user made
-Method:             checkEquivalence()
+**Method:             checkEquivalence()**
+* // sets the equivList array by checking for possibilities that are equivilant to the guess the user made
 
-// sets the current word giving the user the hightest possible chance to lose
-Method:             cheat()
+**Method:             cheat()**
+* // sets the current word giving the user the hightest possible chance to lose
+
 
 Images
 ------
