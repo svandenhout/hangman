@@ -31,10 +31,10 @@ normal hangman
 
 **Class:              EvilHangman()**
 
-Class var:          Array list
-Class var:          Array equivList
-Class var:          String currentWord
-Class var:          String cMonologue
+* Class var:          Array list
+* Class var:          Array equivList
+* Class var:          String currentWord
+* Class var:          String cMonologue
 
 // sets the list array with all the possible words
 Method:             getList()
