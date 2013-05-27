@@ -16,26 +16,79 @@ Frameworks Languages & libraries
 - java
 - android sdk
 
+Models
+------
+
+- Hangman: a model that does all of the backend needed to play the game of hangman
+- hi scores: a model that makes a hightscore list and keeps track of the list
+
 Classes etc (code design)
 -------------------------
 
-- Class:              Cheater()
+normal hangman
+--------------
 
-- Class var:          Array list
-- Class var:          Array equivList
-- Class var:          String currentWord
-- Class var:          String cMonologue
+**Class:              Hangman()**
 
-// sets the list array with all the possible words
-- Method:             getList()
+Class var:          int wordLength
 
-// sets the equivList array by checking for possibilities that are equivilant to the guess the user made
-- Method:             checkEquivalence()
+Class var:          Array list
 
-// sets the current word giving the user the hightest possible chance to lose
-- Method:             cheat()
+Class var:          String currentWord
+
+Class var:          String cMonologue
+
+
+**Method:             getList()**
+
+* // sets the list array with all the possible words
+
+**Method:             setWord(wordLength)**
+
+* // picks a psuedo randomn word from the list by set length
+
+**Method:             checkUserInput()**
+
+* // returns the guessed letter and place(s) in the string, return false when the guessed letter is not in the word
+
+evil hangman
+------------
+
+**Class:              EvilHangman()**
+
+Class var:          Array list
+
+Class var:          Array equivList
+
+Class var:          String currentWord
+
+Class var:          String cMonologue
+
+
+**Method:             getList()**
+
+* // sets the list array with all the possible words
+
+**Method:             checkEquivalence()**
+
+* // sets the equivList array by checking for possibilities that are equivilant to the guess the user made
+
+**Method:             cheat()**
+
+* // sets the current word giving the user the hightest possible chance to lose
+
 
 Images
 ------
 
-// coming soon
+Schets van het scherm waar hangman in gespeeld word:
+![Game screen](doc/Opzet interface.JPG)
+
+Opzet classes evil hangman (niet meer nodig):
+![Classes](doc/Poging tot class.JPG)
+
+
+Design doc
+----------
+
+https://moqups.com/svandenhout/RbfktZxW
