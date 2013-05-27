@@ -16,24 +16,36 @@ Frameworks Languages & libraries
 - java
 - android sdk
 
+Models
+------
+
+- Hangman: a model that does all of the backend needed to play the game of hangman
+- hi scores: a model that makes a hightscore list and keeps track of the list
+
 Classes etc (code design)
 -------------------------
 
-- Class:              Cheater()
+normal hangman
+--------------
 
-- Class var:          Array list
-- Class var:          Array equivList
-- Class var:          String currentWord
-- Class var:          String cMonologue
+evil hangman
+------------
 
-// sets the list array with all the possible words
-- Method:             getList()
+`Class:              EvilHangman()
 
-// sets the equivList array by checking for possibilities that are equivilant to the guess the user made
-- Method:             checkEquivalence()
+`Class var:          Array list
+`Class var:          Array equivList
+`Class var:          String currentWord
+`Class var:          String cMonologue
 
-// sets the current word giving the user the hightest possible chance to lose
-- Method:             cheat()
+`// sets the list array with all the possible words
+`Method:             getList()
+
+`sets the equivList array by checking for possibilities that are equivilant to the guess the user made
+`Method:             checkEquivalence()
+
+`sets the current word giving the user the hightest possible chance to lose
+`Method:             cheat()
 
 Images
 ------
