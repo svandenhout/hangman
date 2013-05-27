@@ -21,7 +21,6 @@ Models
 
 - Hangman: a model that does all of the backend needed to play the game of hangman (class vars are saved local) also contains game settings
 - HiScores: a model that makes a hightscore list and saves it to the local memory
-- 
 
 Model Classes (code design)
 ---------------------------
