@@ -81,7 +81,11 @@ Class var:          String cMonologue
 Images
 ------
 
-// coming soon
+Schets van het scherm waar hangman in gespeeld word:
+![Game screen](doc/Opzet interface.JPG)
+
+Opzet classes evil hangman (niet meer nodig):
+![Classes](doc/Poging tot class.JPG)
 
 
 Design doc
