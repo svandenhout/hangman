@@ -28,6 +28,31 @@ Classes etc (code design)
 normal hangman
 --------------
 
+**Class:              Hangman()**
+
+Class var:          int wordLength
+
+Class var:          Array list
+
+Class var:          String currentWord
+
+Class var:          String cMonologue
+
+
+**Method:             getList()**
+
+* // sets the list array with all the possible words
+
+**Method:             setWord(wordLength)**
+
+* // picks a psuedo randomn word from the list by set length
+
+**Method:             checkUserInput()**
+
+* // returns the guessed letter and place(s) in the string, false when the guessed letter is not in the word
+
+evil hangman
+------------
 
 **Class:              EvilHangman()**
 
