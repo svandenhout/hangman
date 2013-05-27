@@ -36,6 +36,9 @@ Class var:          int wordLength
 
 Class var:          int tries
 
+
+Const Class var:    return
+
 Class var:          Array wordList
 
 Class var:          String currentWord
@@ -43,21 +46,21 @@ Class var:          String currentWord
 Class var:          String cMonologue
 
 
-**Method:             getList()**
+**Method:             initList()**
 
 * // sets the list array with all the possible words
 
-**Method:             settings()**
-
-* // sets all of the settings with standard settings or user preferences
-
-**Method:             setWord(wordLength)**
+**Method:             chooseRandomnWord(wordLength)**
 
 * // picks a psuedo randomn word from the list by set length
 
-**Method:             checkUserInput()**
+**Method:             doUserInput(letter)**
 
-* // returns the guessed letter and place(s) in the string, return false when the guessed letter is not in the word
+* // 
+
+**Method:             getCurrentWord()**
+
+* // 
 
 **Method:             reset()**
 
@@ -78,37 +81,9 @@ Class var:          Array top10
 
 * // adds a score to the scores arraylist
 
-**Method:             setTop10()**
+**Method:             getTop10()**
 
-* // sets the top 10 from the scores list
-
-
-
-EvilHangman
------------
-
-**Class:              EvilHangman()**
-
-Class var:          Array list
-
-Class var:          Array equivList
-
-Class var:          String currentWord
-
-Class var:          String cMonologue
-
-
-**Method:             getList()**
-
-* // sets the list array with all the possible words
-
-**Method:             checkEquivalence()**
-
-* // sets the equivList array by checking for possibilities that are equivilant to the guess the user made
-
-**Method:             cheat()**
-
-* // sets the current word giving the user the hightest possible chance to lose
+* // gets the top 10 from the scores list
 
 
 Images
