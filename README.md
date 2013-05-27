@@ -28,24 +28,22 @@ Classes etc (code design)
 normal hangman
 --------------
 
-evil hangman
-------------
 
-`Class:              EvilHangman()
-`
-`Class var:          Array list
-`Class var:          Array equivList
-`Class var:          String currentWord
-`Class var:          String cMonologue
-`
-`// sets the list array with all the possible words
-`Method:             getList()
-`
-`sets the equivList array by checking for possibilities that are equivilant to the guess the user made
-`Method:             checkEquivalence()
-`
-`sets the current word giving the user the hightest possible chance to lose
-`Method:             cheat()
+**Class:              EvilHangman()**
+
+Class var:          Array list
+Class var:          Array equivList
+Class var:          String currentWord
+Class var:          String cMonologue
+
+// sets the list array with all the possible words
+Method:             getList()
+
+// sets the equivList array by checking for possibilities that are equivilant to the guess the user made
+Method:             checkEquivalence()
+
+// sets the current word giving the user the hightest possible chance to lose
+Method:             cheat()
 
 Images
 ------
