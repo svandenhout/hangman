@@ -6,7 +6,9 @@
 
     <string name="action_settings">Settings</string>
     <string name="app_name">Project5</string>
+    <string name="button">KLIK</string>
     <string name="hello_world">Hello world!</string>
+    <string name="new_string">zoek het uit</string>
 
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

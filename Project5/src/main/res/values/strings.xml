@@ -7,5 +7,9 @@
     </string>
     <string name="hello_world" >Hello world!
     </string>
+    <string name="new_string" >zoek het uit
+    </string>
+    <string name="button" >KLIK
+    </string>
 
 </resources>
