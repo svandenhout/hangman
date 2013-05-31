@@ -14,13 +14,20 @@ import java.io.IOException;
 import nl.hangman.project5.models.Hangman;
 
 public class MainActivity extends Activity {
+    Hangman hangman;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // should set on screen keyboard to allways visible
+        // my code
+        hangman = new Hangman("steven", 5, 10);
+        hangman.initEmptyCurrentWordState();
+        String state = hangman.getCurrentWordState();
+        TextView tx = (TextView) findViewById(R.id.textView);
+        tx.setText(state);
+        // should set on screen keyboard to allways visible TODO: it doesnt though
         // getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
     }
 
@@ -32,12 +39,13 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    // volgens mij heb ik het redelijk in de vingers deze
-    // kan ik gebruiken om een speelklasse op de achtergrond te maken
+    // happens when i push a button right now........
     public void showState(View view) {
-        Hangman hangman = new Hangman();
 
-        // weet ik gelijk hoe exceptions ook alweer werkte
+
+
+        // loads of exceptions for initList, since i needed both the
+        // IOException and the XmlPullParserException
         try {
             hangman.initList(getResources().openRawResource(R.raw.small));
         } catch (XmlPullParserException e) {
@@ -45,9 +53,9 @@ public class MainActivity extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        hangman.chooseRandomWord();
 
-        String state = hangman.wordList.get(0);
-
+        String state = hangman.getCurrentWord();
         TextView tx = (TextView) findViewById(R.id.textView);
         tx.setText(state);
     }

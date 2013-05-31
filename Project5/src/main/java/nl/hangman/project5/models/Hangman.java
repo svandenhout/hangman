@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by steven on 5/28/13.
@@ -30,14 +31,35 @@ public class Hangman {
     };
 
 
-    public ArrayList<String> wordList = new ArrayList<String>() ;
+    private ArrayList<String> wordList = new ArrayList<String>() ;
     private String currentWord;
     private String currentWordState;
     private String usedLetters;
     private String computerMonologue;
 
-    public Hangman() {
-        // do constructor stuff
+    // the constructor takes all of the game settings as arguments
+    public Hangman(String playerName, int wordLength, int tries) {
+        this.playerName = playerName;
+        this.wordLength = wordLength;
+        this.tries = tries;
+    }
+
+    // returns the current word (the one that will be played with)
+    public String getCurrentWord() {
+        return currentWord;
+    }
+
+    public String getCurrentWordState() {
+        return currentWordState;
+    }
+
+    // initialises an empty currentWordState variable
+    public void initEmptyCurrentWordState() {
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < wordLength; i ++) {
+            s.append("_");
+        }
+        currentWordState = s.toString();
     }
 
     // when called fills the wordlist array
@@ -63,5 +85,12 @@ public class Hangman {
             eventType = xpp.next();
         }
         wordList.trimToSize();
+    }
+
+    // uses Pseudorandomness to pick and set the current word from the wordlist
+    public void chooseRandomWord() {
+        Random random = new Random();
+        int number = random.nextInt(wordList.size());
+        currentWord = wordList.get(number);
     }
 }
