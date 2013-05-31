@@ -10,7 +10,7 @@ apply plugin: 'android'
 
 dependencies {
     compile files('libs/android-support-v4.jar')
-    compile files('libs/jplist-1.1-j4.jar')
+    compile files('libs/xmlwise-1_2.jar')
 }
 
 android {

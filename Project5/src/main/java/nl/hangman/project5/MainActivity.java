@@ -6,6 +6,11 @@ import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+
 import nl.hangman.project5.models.Hangman;
 
 public class MainActivity extends Activity {
@@ -31,9 +36,17 @@ public class MainActivity extends Activity {
     // kan ik gebruiken om een speelklasse op de achtergrond te maken
     public void showState(View view) {
         Hangman hangman = new Hangman();
-        String state = hangman.userInputStates[0];
 
-        hangman.initList();
+        // weet ik gelijk hoe exceptions ook alweer werkte
+        try {
+            hangman.initList(getResources().openRawResource(R.raw.small));
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String state = hangman.wordList.get(0);
 
         TextView tx = (TextView) findViewById(R.id.textView);
         tx.setText(state);
