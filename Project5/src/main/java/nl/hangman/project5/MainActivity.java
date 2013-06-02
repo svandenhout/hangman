@@ -2,9 +2,10 @@ package nl.hangman.project5;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -14,6 +15,7 @@ import java.io.IOException;
 import nl.hangman.project5.models.Hangman;
 
 public class MainActivity extends Activity {
+    private final static String TAG = "MainActivity";
     Hangman hangman;
 
     @Override
@@ -31,7 +33,6 @@ public class MainActivity extends Activity {
         // getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -39,11 +40,15 @@ public class MainActivity extends Activity {
         return true;
     }
 
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        int key = event.getUnicodeChar();
+        hangman.doUserInput(key);
+        return true;
+    }
+
     // happens when i push a button right now........
     public void showState(View view) {
-
-
-
         // loads of exceptions for initList, since i needed both the
         // IOException and the XmlPullParserException
         try {

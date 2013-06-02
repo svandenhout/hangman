@@ -93,4 +93,25 @@ public class Hangman {
         int number = random.nextInt(wordList.size());
         currentWord = wordList.get(number);
     }
+
+    // checks for the validaty of the entered character, the returnvalue refers to a
+    // USER_INPUT_STATE
+    public void doUserInput(int key) {
+        // TODO: user string builder .append() to make used letters list
+
+        // check if the letter has been pushed already
+        // so a user can not check the same letter twice
+        if(this.usedLetters.indexOf(key) != -1) {
+            char c = (char) key;
+            StringBuilder s = new StringBuilder();
+            s.append(this.usedLetters);
+            s.append(c);
+        }else {
+            // ALLREADY PUSHED THE LETTER
+        }
+
+        this.usedLetters = s.toString();
+
+        Log.d(TAG, String.format("usedKeys = %s", this.usedLetters));
+    }
 }
