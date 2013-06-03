@@ -96,22 +96,35 @@ public class Hangman {
 
     // checks for the validaty of the entered character, the returnvalue refers to a
     // USER_INPUT_STATE
-    public void doUserInput(int key) {
-        // TODO: user string builder .append() to make used letters list
+    public String doUserInput(int key) {
+        StringBuilder s = new StringBuilder();
 
         // check if the letter has been pushed already
         // so a user can not check the same letter twice
         if(this.usedLetters.indexOf(key) != -1) {
             char c = (char) key;
-            StringBuilder s = new StringBuilder();
             s.append(this.usedLetters);
             s.append(c);
+            this.usedLetters = s.toString();
+
+            char[] ca = this.currentWordState.toCharArray();
+            int i = 0;
+            while(true) if (this.currentWord.indexOf(c, i) != -1) {
+                i = this.currentWord.indexOf(c, i);
+                ca[i] = c;
+                i++;
+            } else {
+                break;
+            }
+            // TODO: how to wrong guess
+            this.currentWordState = ca.toString();
         }else {
-            // ALLREADY PUSHED THE LETTER
+            // letter already used
+            return USER_INPUT_STATES[0];
         }
 
-        this.usedLetters = s.toString();
 
-        Log.d(TAG, String.format("usedKeys = %s", this.usedLetters));
+
+        return USER_INPUT_STATES[1];
     }
 }

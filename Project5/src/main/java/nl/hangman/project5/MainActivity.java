@@ -17,6 +17,7 @@ import nl.hangman.project5.models.Hangman;
 public class MainActivity extends Activity {
     private final static String TAG = "MainActivity";
     Hangman hangman;
+    String userState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivity extends Activity {
         // my code
         hangman = new Hangman("steven", 5, 10);
         hangman.initEmptyCurrentWordState();
+
         String state = hangman.getCurrentWordState();
         TextView tx = (TextView) findViewById(R.id.textView);
         tx.setText(state);
@@ -43,7 +45,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         int key = event.getUnicodeChar();
-        hangman.doUserInput(key);
+        userState = hangman.doUserInput(key);
         return true;
     }
 
