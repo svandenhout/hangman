@@ -49,15 +49,17 @@
             <file
                 path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values/strings.xml"
                 qualifiers="" >
+                <string name="currentWord" >current word
+                </string>
                 <string name="action_settings" >Settings
                 </string>
                 <string name="button" >KLIK
                 </string>
                 <string name="app_name" >Project5
                 </string>
-                <string name="hello_world" >Hello world!
+                <string name="currentWordState" >current word state
                 </string>
-                <string name="new_string" >zoek het uit
+                <string name="usedLetters" >used letters
                 </string>
             </file>
             <file

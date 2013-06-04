@@ -42,15 +42,21 @@ public class Hangman {
         this.playerName = playerName;
         this.wordLength = wordLength;
         this.tries = tries;
+
+        this.usedLetters = "";
     }
 
     // returns the current word (the one that will be played with)
     public String getCurrentWord() {
-        return currentWord;
+        return this.currentWord;
     }
 
     public String getCurrentWordState() {
-        return currentWordState;
+        return this.currentWordState;
+    }
+
+    public String getUsedLetters() {
+        return this.usedLetters;
     }
 
     // initialises an empty currentWordState variable
@@ -59,7 +65,7 @@ public class Hangman {
         for (int i = 0; i < wordLength; i ++) {
             s.append("_");
         }
-        currentWordState = s.toString();
+        this.currentWordState = s.toString();
     }
 
     // when called fills the wordlist array
@@ -78,53 +84,52 @@ public class Hangman {
                 line = xpp.getText();
                 line = line.trim();
                 if(!line.equals("")) {
-                    wordList.add(xpp.getText());
-                    Log.d(TAG,"Text " + xpp.getText());
+                    this.wordList.add(xpp.getText().toLowerCase());
                 }
             }
             eventType = xpp.next();
         }
-        wordList.trimToSize();
+        this.wordList.trimToSize();
     }
 
     // uses Pseudorandomness to pick and set the current word from the wordlist
     public void chooseRandomWord() {
         Random random = new Random();
-        int number = random.nextInt(wordList.size());
-        currentWord = wordList.get(number);
+        int number = random.nextInt(this.wordList.size());
+        this.currentWord = this.wordList.get(number);
     }
 
     // checks for the validaty of the entered character, the returnvalue refers to a
     // USER_INPUT_STATE
-    public String doUserInput(int key) {
+    public void doUserInput(int key) {
         StringBuilder s = new StringBuilder();
-
+        char c = (char) key;
+        // TODO: return states
         // check if the letter has been pushed already
         // so a user can not check the same letter twice
-        if(this.usedLetters.indexOf(key) != -1) {
-            char c = (char) key;
+
+        // TODO: DIT IS FOUT
+        // this.usedLetters = null
+        if(this.usedLetters.indexOf(key) == -1) {
+
             s.append(this.usedLetters);
             s.append(c);
             this.usedLetters = s.toString();
 
             char[] ca = this.currentWordState.toCharArray();
             int i = 0;
-            while(true) if (this.currentWord.indexOf(c, i) != -1) {
-                i = this.currentWord.indexOf(c, i);
+            while(true) if (this.currentWord.indexOf(key, i) != -1) {
+                i = this.currentWord.indexOf(key, i);
                 ca[i] = c;
                 i++;
-            } else {
+            }else {
                 break;
             }
-            // TODO: how to wrong guess
-            this.currentWordState = ca.toString();
+            this.currentWordState = new String(ca);
+            // return USER_INPUT_STATES[3];
         }else {
             // letter already used
-            return USER_INPUT_STATES[0];
+            // return USER_INPUT_STATES[0];
         }
-
-
-
-        return USER_INPUT_STATES[1];
     }
 }

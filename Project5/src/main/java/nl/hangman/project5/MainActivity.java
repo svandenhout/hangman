@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
-import android.view.View;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -17,7 +16,16 @@ import nl.hangman.project5.models.Hangman;
 public class MainActivity extends Activity {
     private final static String TAG = "MainActivity";
     Hangman hangman;
+
     String userState;
+    String currentWord;
+    String currentWordState;
+    String usedLetters;
+
+    TextView currentWordView;
+    TextView currentWordStateView;
+    TextView usedLettersView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +33,28 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         // my code
-        hangman = new Hangman("steven", 5, 10);
+        hangman = new Hangman("steven", 4, 10);
         hangman.initEmptyCurrentWordState();
 
-        String state = hangman.getCurrentWordState();
-        TextView tx = (TextView) findViewById(R.id.textView);
-        tx.setText(state);
+        try {
+            hangman.initList(getResources().openRawResource(R.raw.small));
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        hangman.chooseRandomWord();
+
+        currentWord = hangman.getCurrentWord();
+        currentWordState = hangman.getCurrentWordState();
+
+        currentWordView = (TextView) findViewById(R.id.currentWord);
+        currentWordStateView = (TextView) findViewById(R.id.currentWordState);
+        usedLettersView = (TextView) findViewById(R.id.usedLetters);
+
+        currentWordView.setText(currentWord);
+        currentWordStateView.setText(currentWordState);
+        usedLettersView.setText(usedLetters);
         // should set on screen keyboard to allways visible TODO: it doesnt though
         // getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
     }
@@ -45,25 +69,14 @@ public class MainActivity extends Activity {
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         int key = event.getUnicodeChar();
-        userState = hangman.doUserInput(key);
+        hangman.doUserInput(key);
+
+        currentWordState = hangman.getCurrentWordState();
+        currentWordStateView.setText(currentWordState);
+
+        usedLetters = hangman.getUsedLetters();
+        usedLettersView.setText(usedLetters);
+
         return true;
-    }
-
-    // happens when i push a button right now........
-    public void showState(View view) {
-        // loads of exceptions for initList, since i needed both the
-        // IOException and the XmlPullParserException
-        try {
-            hangman.initList(getResources().openRawResource(R.raw.small));
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        hangman.chooseRandomWord();
-
-        String state = hangman.getCurrentWord();
-        TextView tx = (TextView) findViewById(R.id.textView);
-        tx.setText(state);
     }
 }

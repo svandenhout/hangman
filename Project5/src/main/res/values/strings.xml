@@ -5,11 +5,10 @@
     </string>
     <string name="action_settings" >Settings
     </string>
-    <string name="hello_world" >Hello world!
+    <string name="currentWord" >current word
     </string>
-    <string name="new_string" >zoek het uit
+    <string name="currentWordState" >current word state
     </string>
-    <string name="button" >KLIK
+    <string name="usedLetters" >used letters
     </string>
-
 </resources>
