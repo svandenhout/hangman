@@ -18,6 +18,10 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+/*
+ * TODO: SeekBarDialogPreference onthoud de waarde van de preference niet
+ */
+
 /**
  * The SeekBarDialogPreference class is a DialogPreference based and provides a
  * seekbar preference.

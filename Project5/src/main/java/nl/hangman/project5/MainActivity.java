@@ -31,44 +31,17 @@ public class MainActivity extends Activity {
     TextView usedLettersView;
 
     SharedPreferences preferences;
-
+    String userName;
+    int wordLength;
+    int amountOfTurns;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // my code
-
-        preferences = getSharedPreferences("hangman_preferences", 0);
-        String userName = preferences.getString("user_name_preference", "Player 1");
-        int wordLength = preferences.getInt("word_length_preference", 4);
-        int amountOfTurns = preferences.getInt("amount_of_turns_preference", 10);
-
-        hangman = new Hangman(userName, wordLength, amountOfTurns);
-        hangman.initEmptyCurrentWordState();
-
-        try {
-            hangman.initList(getResources().openRawResource(R.raw.small));
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        hangman.chooseRandomWord();
-
-        currentWord = hangman.getCurrentWord();
-        currentWordState = hangman.getCurrentWordState();
-
-        currentWordView = (TextView) findViewById(R.id.currentWord);
-        currentWordStateView = (TextView) findViewById(R.id.currentWordState);
-        usedLettersView = (TextView) findViewById(R.id.usedLetters);
-        computerMonologueView = (TextView) findViewById(R.id.computerDialogue);
-
-        currentWordView.setText(currentWord);
-        currentWordStateView.setText(currentWordState);
-        usedLettersView.setText(usedLetters);
-        computerMonologueView.setText(computerMonologue);
+        // resetGame();
+        resetGame();
     }
 
     @Override
@@ -81,6 +54,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         final Context context = this;
+        Intent intent;
 
         // Handle item selection
         switch (item.getItemId()) {
@@ -88,11 +62,11 @@ public class MainActivity extends Activity {
 
                 return true;
             case R.id.settings:
-                Intent intent = new Intent(context, PreferencesActivity.class);
+                intent = new Intent(context, PreferencesActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.reset:
-
+                resetGame();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -112,5 +86,37 @@ public class MainActivity extends Activity {
         usedLettersView.setText(usedLetters);
 
         return true;
+    }
+
+    private void resetGame() {
+        preferences = getSharedPreferences("hangman_preferences", 0);
+        userName = preferences.getString("user_name_preference", "Player 1");
+        wordLength = preferences.getInt("word_length_preference", 4);
+        amountOfTurns = preferences.getInt("incorrect_guesses_preference", 10);
+
+        hangman = new Hangman(userName, wordLength, amountOfTurns);
+        hangman.initEmptyCurrentWordState();
+
+        try {
+            hangman.initList(getResources().openRawResource(R.raw.words));
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        hangman.chooseRandomWord();
+
+        currentWord = hangman.getCurrentWord();
+        currentWordState = hangman.getCurrentWordState();
+
+        currentWordView = (TextView) findViewById(R.id.currentWord);
+        currentWordStateView = (TextView) findViewById(R.id.currentWordState);
+        usedLettersView = (TextView) findViewById(R.id.usedLetters);
+        computerMonologueView = (TextView) findViewById(R.id.computerDialogue);
+
+        currentWordView.setText(currentWord);
+        currentWordStateView.setText(currentWordState);
+        usedLettersView.setText(usedLetters);
+        computerMonologueView.setText(computerMonologue);
     }
 }

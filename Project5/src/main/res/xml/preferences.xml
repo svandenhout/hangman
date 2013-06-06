@@ -13,7 +13,7 @@
 
     <nl.hangman.project5.SeekBarDialogPreference
             android:key="word_length_preference"
-            costum:minimumValue="5"
+            costum:minimumValue="1"
             costum:maximumValue="20"
             costum:stepSize="1"
             costum:units=" letters"
@@ -22,9 +22,9 @@
             android:summary="@string/summary_word_length"/>
 
     <nl.hangman.project5.SeekBarDialogPreference
-            android:key="amount_of_turns_preference"
-            costum:minimumValue="5"
-            costum:maximumValue="20"
+            android:key="incorrect_guesses_preference"
+            costum:minimumValue="1"
+            costum:maximumValue="26"
             costum:stepSize="1"
             costum:units=" turns"
             android:title="@string/title_amount_of_turns"

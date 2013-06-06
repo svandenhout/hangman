@@ -1,4 +1,6 @@
 package nl.hangman.project5;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
@@ -10,6 +12,8 @@ import android.util.Log;
 public class PreferencesActivity extends PreferenceActivity implements
     SharedPreferences.OnSharedPreferenceChangeListener {
     private static final String TAG = "PreferencesActivity";
+    private SharedPreferences sPref;
+    private boolean changedPrefs;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +23,12 @@ public class PreferencesActivity extends PreferenceActivity implements
         addPreferencesFromResource(R.xml.preferences);
         getPreferenceManager().getSharedPreferences().
             registerOnSharedPreferenceChangeListener(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        changedPrefs = false;
     }
 
     protected void onDestroy() {
@@ -33,6 +43,20 @@ public class PreferencesActivity extends PreferenceActivity implements
     }
 
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        Log.d(TAG, key);
+        changedPrefs = true;
+    }
+
+    // overrides the back button so the game is reset (hopefully)
+    @Override
+    public void onBackPressed() {
+        if(changedPrefs == true) {
+            final Context context = this;
+            Intent intent = new Intent(context, MainActivity.class);
+            startActivity(intent);
+
+            super.onBackPressed();
+        }else {
+            super.onBackPressed();
+        }
     }
 }

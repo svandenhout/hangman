@@ -20,7 +20,7 @@ public class Hangman {
 
     private String playerName;
     private int wordLength;
-    private int tries;
+    private int turns;
 
     //
     public static final String[] USER_INPUT_STATES = {
@@ -41,7 +41,9 @@ public class Hangman {
     public Hangman(String playerName, int wordLength, int tries) {
         this.playerName = playerName;
         this.wordLength = wordLength;
-        this.tries = tries;
+        this.turns = tries;
+
+        Log.d(TAG, playerName);
 
         this.usedLetters = "";
     }
@@ -83,7 +85,7 @@ public class Hangman {
             if(eventType == XmlPullParser.TEXT) {
                 line = xpp.getText();
                 line = line.trim();
-                if(!line.equals("")) {
+                if(!line.equals("") && line.length() == this.wordLength) {
                     this.wordList.add(xpp.getText().toLowerCase());
                 }
             }
