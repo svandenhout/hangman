@@ -26,6 +26,7 @@
             android:name="nl.hangman.project5.PreferencesActivity"
             android:label="preferences">
         </activity>
+        <activity android:name=".HiScoreActivity"/>
     </application>
 
 </manifest>

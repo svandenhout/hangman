@@ -13,12 +13,14 @@ import android.widget.TextView;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import nl.hangman.project5.models.Hangman;
 
 public class MainActivity extends Activity {
     private final static String TAG = "MainActivity";
     Hangman hangman;
+    InputStream wordList;
 
     String computerMonologue;
     String currentWord;
@@ -35,12 +37,13 @@ public class MainActivity extends Activity {
     int wordLength;
     int amountOfTurns;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // resetGame();
         resetGame();
     }
 
@@ -98,12 +101,16 @@ public class MainActivity extends Activity {
         hangman.initEmptyCurrentWordState();
 
         try {
-            hangman.initList(getResources().openRawResource(R.raw.words));
+            wordList = getResources().openRawResource(R.raw.words);
+            hangman.initList(wordList);
+            wordList.close();
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
         hangman.chooseRandomWord();
 
         currentWord = hangman.getCurrentWord();

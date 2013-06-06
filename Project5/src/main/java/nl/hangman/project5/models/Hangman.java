@@ -20,14 +20,16 @@ public class Hangman {
 
     private String playerName;
     private int wordLength;
-    private int turns;
+    private int wrongGuesses;
+    private int wrongGuessesDone;
 
-    //
     public static final String[] USER_INPUT_STATES = {
         "already used",
         "invalid input",
         "wrong guess",
-        "correct guess"
+        "correct guess",
+        "game won",
+        "game lost"
     };
 
 
@@ -38,14 +40,15 @@ public class Hangman {
     private String computerMonologue;
 
     // the constructor takes all of the game settings as arguments
-    public Hangman(String playerName, int wordLength, int tries) {
+    public Hangman(String playerName, int wordLength, int wrongGuesses) {
         this.playerName = playerName;
         this.wordLength = wordLength;
-        this.turns = tries;
+        this.wrongGuesses = wrongGuesses;
 
         Log.d(TAG, playerName);
 
         this.usedLetters = "";
+        this.wrongGuessesDone = 0;
     }
 
     // returns the current word (the one that will be played with)
@@ -64,7 +67,7 @@ public class Hangman {
     // initialises an empty currentWordState variable
     public void initEmptyCurrentWordState() {
         StringBuilder s = new StringBuilder();
-        for (int i = 0; i < wordLength; i ++) {
+        for (int i = 0; i < this.wordLength; i ++) {
             s.append("_");
         }
         this.currentWordState = s.toString();
@@ -86,12 +89,13 @@ public class Hangman {
                 line = xpp.getText();
                 line = line.trim();
                 if(!line.equals("") && line.length() == this.wordLength) {
-                    this.wordList.add(xpp.getText().toLowerCase());
+                    this.wordList.add(line.toLowerCase());
                 }
             }
             eventType = xpp.next();
         }
         this.wordList.trimToSize();
+        is.close();
     }
 
     // uses Pseudorandomness to pick and set the current word from the wordlist
@@ -119,6 +123,7 @@ public class Hangman {
             s.append(c);
             this.usedLetters = s.toString();
 
+
             char[] ca = this.currentWordState.toCharArray();
             int i = 0;
             while(true) if (this.currentWord.indexOf(key, i) != -1) {
@@ -133,11 +138,25 @@ public class Hangman {
             // that means a correct match has not been found
             if(i == 0) {
                 // wrong guess
-                return USER_INPUT_STATES[2];
+                this.wrongGuessesDone++;
+                // when true the game is lost
+                if(this.wrongGuessesDone == this.wrongGuesses) {
+                    // lost the game
+                    return USER_INPUT_STATES[5];
+                }else {
+                    // wrong guess
+                    return USER_INPUT_STATES[2];
+                }
             }else {
                 this.currentWordState = new String(ca);
-                // correct guess
-                return USER_INPUT_STATES[3];
+                // when true the game is won
+                if(this.currentWordState.equals(this.currentWord)) {
+                    // won the game
+                    return USER_INPUT_STATES[4];
+                }else {
+                    // correct guess
+                    return USER_INPUT_STATES[3];
+                }
             }
         }else {
             // letter already used
