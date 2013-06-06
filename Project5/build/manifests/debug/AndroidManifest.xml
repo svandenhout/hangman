@@ -10,6 +10,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:label="preferences" android:name="nl.hangman.project5.PreferencesActivity">
+        </activity>
     </application>
 
 </manifest>

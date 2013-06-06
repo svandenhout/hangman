@@ -9,36 +9,86 @@ package nl.hangman.project5;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int maximumValue=0x7f010000;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int minimumValue=0x7f010001;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int stepSize=0x7f010002;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int units=0x7f010003;
     }
     public static final class dimen {
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090003;
-        public static final int currentWord=0x7f090000;
-        public static final int currentWordState=0x7f090002;
-        public static final int usedLetters=0x7f090001;
+        public static final int computerDialogue=0x7f0a0001;
+        public static final int currentWord=0x7f0a0002;
+        public static final int currentWordState=0x7f0a0003;
+        public static final int hiScores=0x7f0a0006;
+        public static final int reset=0x7f0a0008;
+        public static final int seekbar=0x7f0a0005;
+        public static final int settings=0x7f0a0007;
+        public static final int usedLetters=0x7f0a0000;
+        public static final int valueText=0x7f0a0004;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int activity_preferences=0x7f030001;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f090000;
     }
     public static final class raw {
-        public static final int small=0x7f040000;
-        public static final int words=0x7f040001;
+        public static final int small=0x7f050000;
+        public static final int words=0x7f050001;
     }
     public static final class string {
-        public static final int action_settings=0x7f060000;
-        public static final int app_name=0x7f060001;
-        public static final int currentWord=0x7f060002;
-        public static final int currentWordState=0x7f060003;
-        public static final int usedLetters=0x7f060004;
+        public static final int app_name=0x7f070000;
+        public static final int computer_dialogue=0x7f070001;
+        public static final int current_word=0x7f070002;
+        public static final int current_word_state=0x7f070003;
+        public static final int dialog_amount_of_turns=0x7f070004;
+        public static final int dialog_user_name=0x7f070005;
+        public static final int dialog_word_length=0x7f070006;
+        public static final int hi_scores=0x7f070007;
+        public static final int reset=0x7f070008;
+        public static final int settings=0x7f070009;
+        public static final int summary_amount_of_turns=0x7f07000a;
+        public static final int summary_user_name=0x7f07000b;
+        public static final int summary_word_length=0x7f07000c;
+        public static final int title_amount_of_turns=0x7f07000d;
+        public static final int title_user_name=0x7f07000e;
+        public static final int title_word_length=0x7f07000f;
+        public static final int used_letters=0x7f070010;
     }
     public static final class style {
         /** 
@@ -49,9 +99,89 @@ public final class R {
  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f080001;
     }
+    public static final class xml {
+        public static final int preferences=0x7f040000;
+    }
+    public static final class styleable {
+        /** Attributes that can be used with a SeekBarDialogPreference.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SeekBarDialogPreference_maximumValue nl.hangman.project5:maximumValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #SeekBarDialogPreference_minimumValue nl.hangman.project5:minimumValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #SeekBarDialogPreference_stepSize nl.hangman.project5:stepSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #SeekBarDialogPreference_units nl.hangman.project5:units}</code></td><td></td></tr>
+           </table>
+           @see #SeekBarDialogPreference_maximumValue
+           @see #SeekBarDialogPreference_minimumValue
+           @see #SeekBarDialogPreference_stepSize
+           @see #SeekBarDialogPreference_units
+         */
+        public static final int[] SeekBarDialogPreference = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link nl.hangman.project5.R.attr#maximumValue}
+          attribute's value can be found in the {@link #SeekBarDialogPreference} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:maximumValue
+        */
+        public static final int SeekBarDialogPreference_maximumValue = 0;
+        /**
+          <p>This symbol is the offset where the {@link nl.hangman.project5.R.attr#minimumValue}
+          attribute's value can be found in the {@link #SeekBarDialogPreference} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:minimumValue
+        */
+        public static final int SeekBarDialogPreference_minimumValue = 1;
+        /**
+          <p>This symbol is the offset where the {@link nl.hangman.project5.R.attr#stepSize}
+          attribute's value can be found in the {@link #SeekBarDialogPreference} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:stepSize
+        */
+        public static final int SeekBarDialogPreference_stepSize = 2;
+        /**
+          <p>This symbol is the offset where the {@link nl.hangman.project5.R.attr#units}
+          attribute's value can be found in the {@link #SeekBarDialogPreference} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:units
+        */
+        public static final int SeekBarDialogPreference_units = 3;
+    };
 }

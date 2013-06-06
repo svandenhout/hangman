@@ -1,14 +1,16 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1370345465000 903 9dc9356ca2cfebcc4cdc4207786d63aeff5f101f /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/values/values.xml
-1369914701000 14383 82acdd75e3fcc36026109406625edc69d4d7212d /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/drawable-xhdpi/ic_launcher.png
-1369914701000 9397 4a5a9affbb731f195fc18fea78d51be7db7536a2 /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/drawable-hdpi/ic_launcher.png
+1370515885000 1961 4c7467f3595a63e097049aac19b80579bfad4833 /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/values/values.xml
 1369914701000 125 fae9d1b71d520745438010c9ca7cde9c81dfefac /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/values-sw720dp-land/values.xml
 1369914701000 217 f02e000d05a079992d2dba18039216c1e6b8784f /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/values-v14/values.xml
 1369914701000 203 19aedb7cdc3386344e36087b035a0a6b2b91d4cd /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/values-v11/values.xml
-1369914701000 5237 7761bceaf18ed25cdba5f34bf00a55616d078acf /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/drawable-mdpi/ic_launcher.png
-1369914701000 244 045ff451db7cd8e61285502b8c9bbf7405f2078d /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/menu/main.xml
+1370429032000 550 d52e8011cb88554cc3f426ccc35f894ec981fc2c /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/menu/main.xml
+1370512281000 718 b67593d4bd51614b844d8d2925e7ef09e7f59d3c /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/layout/activity_preferences.xml
 1369915767000 6701186 f84bc450899da6e2bcc37e090f43277fd908c373 /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/raw/words.plist
 1369915767000 305 c0f725ea8cdd562127817cd9754e72a26c202585 /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/raw/small.plist
-1370346950000 1431 94047618b714f8ed7b6c139594af70306379eb8e /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/layout/activity_main.xml
+1370512281000 2006 57f88499e6d2e35ca0b7599f7c2a77cf14579c98 /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/layout/activity_main.xml
+1369914701000 14383 82acdd75e3fcc36026109406625edc69d4d7212d /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/drawable-xhdpi/ic_launcher.png
+1369914701000 9397 4a5a9affbb731f195fc18fea78d51be7db7536a2 /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/drawable-hdpi/ic_launcher.png
+1370516426000 1324 3aad404f1a2c82f2899367ef5a1db6834b72fa28 /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/xml/preferences.xml
+1369914701000 5237 7761bceaf18ed25cdba5f34bf00a55616d078acf /Users/steven/Documents/apps Mprog/project5/Project5/build/res/all/debug/drawable-mdpi/ic_launcher.png

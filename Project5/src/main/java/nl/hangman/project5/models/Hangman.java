@@ -101,15 +101,16 @@ public class Hangman {
 
     // checks for the validaty of the entered character, the returnvalue refers to a
     // USER_INPUT_STATE
-    public void doUserInput(int key) {
+    public String doUserInput(int key) {
         StringBuilder s = new StringBuilder();
         char c = (char) key;
-        // TODO: return states
-        // check if the letter has been pushed already
-        // so a user can not check the same letter twice
 
-        // TODO: DIT IS FOUT
-        // this.usedLetters = null
+        // check if input is actually a-z (only lowercase right now)
+        if(key < 96 && key > 123) {
+            // invalid input
+            return USER_INPUT_STATES[1];
+        }
+
         if(this.usedLetters.indexOf(key) == -1) {
 
             s.append(this.usedLetters);
@@ -125,11 +126,20 @@ public class Hangman {
             }else {
                 break;
             }
-            this.currentWordState = new String(ca);
-            // return USER_INPUT_STATES[3];
+
+            // if i is still 0 that means it hasn't incremented inside the while loop
+            // that means a correct match has not been found
+            if(i == 0) {
+                // wrong guess
+                return USER_INPUT_STATES[2];
+            }else {
+                this.currentWordState = new String(ca);
+                // correct guess
+                return USER_INPUT_STATES[3];
+            }
         }else {
             // letter already used
-            // return USER_INPUT_STATES[0];
+            return USER_INPUT_STATES[0];
         }
     }
 }

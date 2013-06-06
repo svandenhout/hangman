@@ -24,6 +24,11 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_preferences"
+                path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/activity_preferences.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="main"
                 path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/menu/main.xml"
                 qualifiers=""
@@ -39,6 +44,24 @@
                 qualifiers=""
                 type="raw" />
             <file
+                path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values/attrs.xml"
+                qualifiers="" >
+                <declare-styleable name="SeekBarDialogPreference" >
+                    <attr
+                        name="maximumValue"
+                        format="integer" />
+                    <attr
+                        name="minimumValue"
+                        format="integer" />
+                    <attr
+                        name="stepSize"
+                        format="integer" />
+                    <attr
+                        name="units"
+                        format="string" />
+                </declare-styleable>
+            </file>
+            <file
                 path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
@@ -49,17 +72,39 @@
             <file
                 path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values/strings.xml"
                 qualifiers="" >
-                <string name="currentWord" >current word
+                <string name="dialog_amount_of_turns" >amount of turns:
                 </string>
-                <string name="action_settings" >Settings
+                <string name="current_word" >current word
                 </string>
-                <string name="button" >KLIK
+                <string name="current_word_state" >current word state
                 </string>
-                <string name="app_name" >Project5
+                <string name="summary_word_length" >set the length of the words that you want to use
                 </string>
-                <string name="currentWordState" >current word state
+                <string name="title_amount_of_turns" >amount of turns
                 </string>
-                <string name="usedLetters" >used letters
+                <string name="hi_scores" >hi-scores
+                </string>
+                <string name="summary_amount_of_turns" >set the amount of turns until you lose
+                </string>
+                <string name="summary_user_name" >set your user name here
+                </string>
+                <string name="computer_dialogue" >computer dialogue
+                </string>
+                <string name="settings" >settings
+                </string>
+                <string name="used_letters" >used letters
+                </string>
+                <string name="dialog_word_length" >word length:
+                </string>
+                <string name="app_name" >Hangman
+                </string>
+                <string name="dialog_user_name" >user name:
+                </string>
+                <string name="title_word_length" >word length
+                </string>
+                <string name="reset" >reset game
+                </string>
+                <string name="title_user_name" >user name
                 </string>
             </file>
             <file
@@ -115,6 +160,11 @@
                     <!-- API 14 theme customizations can go here. -->
                 </style>
             </file>
+            <file
+                name="preferences"
+                path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/xml/preferences.xml"
+                qualifiers=""
+                type="xml" />
         </source>
         <source path="/Users/steven/Documents/apps Mprog/project5/Project5/build/res/rs/debug" />
     </dataSet>

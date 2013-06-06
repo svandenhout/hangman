@@ -1,18 +1,21 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1370350055000 3829 1940fcbbc40ccb8cec42b68ba8d55f3b52396975 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/models/Hangman.class
-1369916007000 410 6c4264f555461c41f1a9a11ff2ca29ca2f21a09d /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$drawable.class
-1370345466000 391 86e6158297a1c31e1a4d1201c084402bae22497b /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$menu.class
-1370345466000 418 d8502ae195fc39a88aa21037c069b9eecfd85f78 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$raw.class
+1370514565000 3770 70956da24be4d8466d16585c383cebdc53a4a452 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/SeekBarDialogPreference.class
+1370424612000 3662 02a0f56b6fa694108ba77d7396ffbcbcb3c37ece /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/models/Hangman.class
+1370514565000 410 0ee77da1c79cba42ce46141674a87902c458e861 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$drawable.class
+1370514565000 391 6f07e90f69e3e4b722acfe067081bf26caeb7061 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$menu.class
+1370514565000 418 349c708fe40314727613d74dd19410fd419820e6 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$raw.class
 1369914701000 484258 bd6479f5dd592790607e0504e66e0f31c2b4d308 /Users/steven/Documents/apps Mprog/project5/Project5/libs/android-support-v4.jar
-1370346952000 506 c50d3e1d562a7cb4acb2a415090974d14a88aaf7 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$id.class
-1370346952000 2658 998f6bec42f9b2a2b1912656a05c56072a2353ca /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/MainActivity.class
-1370345466000 434 17a2dc8945b64ded2ed95f0d36fd5d7482117c8f /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$style.class
-1370345466000 732 6eff4f5a4dea37bc56e6e0f8df30c776d8ebc767 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R.class
-1370345466000 550 6057241e8ebd72bd26f78e68629891a600bd5d4c /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$string.class
-1369916007000 464 227a5c1a875697fbfc63aba811345dad24b2b7c0 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$dimen.class
-1370345466000 406 557025646b0f0cc89fb4a02c62c6a0985466b6cb /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$layout.class
-1369916007000 343 f55ccfb341840fbe7a3a89d2a67a6e7d40dc7e11 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$attr.class
-1369926202000 12176 82ed648273281ccd08da6f91df30573edf15185d /Users/steven/Documents/apps Mprog/project5/Project5/libs/xmlwise-1_2.jar
+1370514565000 664 ce1724a32475835f6c702351e32c2b4c1e6c0518 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$id.class
+1370515886000 395 b95b9d62234bfdd67f83d44ad22a9f3b1d601a2c /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$xml.class
+1370514565000 3429 ebf4814536467d88214b38e07115c3209caadf80 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/MainActivity.class
+1370516427000 1846 477caae20f9591d3d17e4dc58cb151e997c4cbcc /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/PreferencesActivity.class
+1370515886000 434 c743b8cffd17db1dd7014d858ddf4f18d6f2c895 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$style.class
+1370514565000 830 c3e33ba9bbe305dc97a76e307f7269e9b5c25e3e /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R.class
+1370515886000 1034 9cf3b2414343ab73df5aa4ed70db99532f56eb0a /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$string.class
+1370515886000 752 491d38b8a637054d13e0e972bbf83ad7683fa3ad /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$styleable.class
+1370514565000 464 4f879c013fa0827bc19a4d7bc14916f1248048a2 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$dimen.class
+1370514565000 450 72ca4367f262844405684b3da47d6a3537f512b2 /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$layout.class
+1370514565000 496 ede2e18a186bc177297edd41af8b003efcbb17bb /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/R$attr.class
 1369916007000 347 3af647b173dcdf266662fbdf38c04d0b4c87268e /Users/steven/Documents/apps Mprog/project5/Project5/build/classes/debug/nl/hangman/project5/BuildConfig.class

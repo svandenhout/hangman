@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:costum="http://schemas.android.com/apk/res/nl.hangman.project5">
+
+    <EditTextPreference
+        android:key="user_name_preference"
+        android:title="@string/title_user_name"
+        android:summary="@string/summary_user_name"
+        android:dialogTitle="@string/dialog_user_name"
+        android:defaultValue="Player 1"/>
+
+    <nl.hangman.project5.SeekBarDialogPreference
+            android:key="word_length_preference"
+            costum:minimumValue="5"
+            costum:maximumValue="20"
+            costum:stepSize="1"
+            costum:units=" letters"
+            android:title="@string/title_word_length"
+            android:dialogTitle="@string/dialog_word_length"
+            android:summary="@string/summary_word_length"/>
+
+    <nl.hangman.project5.SeekBarDialogPreference
+            android:key="amount_of_turns_preference"
+            costum:minimumValue="5"
+            costum:maximumValue="20"
+            costum:stepSize="1"
+            costum:units=" turns"
+            android:title="@string/title_amount_of_turns"
+            android:dialogTitle="@string/dialog_amount_of_turns"
+            android:summary="@string/summary_amount_of_turns"/>
+</PreferenceScreen>

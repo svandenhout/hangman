@@ -9,8 +9,18 @@
   </component>
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <target>android-17</target>
+      </config>
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_main.xml">
+        <config>
+          <device>Nexus 4</device>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
@@ -19,17 +29,29 @@
     <list default="true" id="058dd581-fb1e-47ea-bace-e6520a6809bf" name="Default" comment="" />
     <ignored path="Project5.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/activity_main.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370345409397" ignored="false" />
+    <file path="/activity_main.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370425061761" ignored="false" />
     <file path="/a.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1369924931483" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370002184266" ignored="false" />
-    <file path="/fragment.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1369997435053" ignored="false" />
+    <file path="/fragment.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370513218153" ignored="false" />
     <file path="/build.gradle" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1369915460849" ignored="false" />
-    <file path="/strings.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370345444652" ignored="false" />
-    <file path="$PROJECT_DIR$/Project5/build/source/r/debug/nl/hangman/project5/R.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370346963013" ignored="false" />
-    <file path="/Hangman.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370350015272" ignored="false" />
-    <file path="/MainActivity.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370346126182" ignored="false" />
+    <file path="/strings.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370515874397" ignored="false" />
+    <file path="/Hangman.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370351279723" ignored="false" />
+    <file path="/MainActivity.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370518071865" ignored="false" />
     <file path="/a.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1369924935193" ignored="false" />
-    <file path="$PROJECT_DIR$/Project5/build/res/all/debug/layout/activity_main.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370346963013" ignored="false" />
+    <file path="$PROJECT_DIR$/Project5/build/res/all/debug/values/values.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370514573662" ignored="false" />
+    <file path="/main.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370428290697" ignored="false" />
+    <file path="/Dummy.txt" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370505844380" ignored="false" />
+    <file path="/preferences.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370516016996" ignored="false" />
+    <file path="/PreferencesFragment.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370427944961" ignored="false" />
+    <file path="$PROJECT_DIR$/Project5/build/res/all/debug/menu/main.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370429044690" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370429426880" ignored="false" />
+    <file path="/attrs.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370512913713" ignored="false" />
+    <file path="/SeekBarPreference.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370454348833" ignored="false" />
+    <file path="/preferences_main.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370508768502" ignored="false" />
+    <file path="/activity_preferences.xml" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370511300348" ignored="false" />
+    <file path="/SeekBarDialogPreference.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370514553696" ignored="false" />
+    <file path="/PreferencesActivity.java" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370516409142" ignored="false" />
+    <file path="/settings.gradle" changelist="058dd581-fb1e-47ea-bace-e6520a6809bf" time="1370518215356" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,10 +115,38 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+            <state line="34" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preferences.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project5/src/main/res/xml/preferences.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="41" selection-start="242" selection-end="262" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#286#311#0" expanded="true" />
+                <element signature="e#336#363#0" expanded="true" />
+                <element signature="e#392#418#0" expanded="true" />
+                <element signature="e#592#595#0" expanded="true" />
+                <element signature="e#661#664#0" expanded="true" />
+                <element signature="e#727#754#0" expanded="true" />
+                <element signature="e#787#815#0" expanded="true" />
+                <element signature="e#1011#1014#0" expanded="true" />
+                <element signature="e#1047#1051#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="attrs.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project5/src/main/res/values/attrs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="54" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,8 +154,30 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+            <state line="18" column="56" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreferencesActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/PreferencesActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="36" selection-start="575" selection-end="594" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeekBarDialogPreference.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/SeekBarDialogPreference.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,10 +185,23 @@
       <file leaf-file-name="Hangman.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Hangman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="22" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.4491018">
+            <state line="21" column="27" selection-start="474" selection-end="474" vertical-scroll-proportion="0.703125">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#720#728#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_preferences.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_preferences.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="68" selection-start="108" selection-end="108" vertical-scroll-proportion="-1.1111112">
+              <folding>
+                <element signature="e#469#488#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,16 +209,13 @@
       </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="text-editor">
-            <state line="21" column="46" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#733#754#0" expanded="true" />
-                <element signature="e#965#986#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
+          <provider editor-type-id="android-designer">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="13" selection-start="1280" selection-end="1280" vertical-scroll-proportion="-7.037037">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -147,12 +229,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/Project5/src/main/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/Project5/build.gradle" />
-        <option value="$PROJECT_DIR$/Project5/build/res/all/debug/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/Project5/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/Project5/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/seekbarpreference/SeekBarPreference.java" />
         <option value="$PROJECT_DIR$/Project5/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/Project5/src/main/res/layout/preferences_main.xml" />
+        <option value="$PROJECT_DIR$/Project5/src/main/res/layout/activity_preferences.xml" />
+        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/seekbarpreference/SeekBarDialogPreference.java" />
+        <option value="$PROJECT_DIR$/Project5/src/main/res/values/attrs.xml" />
+        <option value="$PROJECT_DIR$/Project5/build/res/all/debug/xml/preferences.xml" />
+        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/SeekBarDialogPreference.java" />
+        <option value="$PROJECT_DIR$/Project5/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/Project5/src/main/res/xml/preferences.xml" />
+        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/PreferencesActivity.java" />
         <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/MainActivity.java" />
-        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Hangman.java" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
       </list>
     </option>
   </component>
@@ -286,6 +378,36 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -314,6 +436,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -424,10 +576,11 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
+    <property name="options.lastSelected" value="File.Encoding" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus-4_4.2.2_lvl-17" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -436,8 +589,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/seekbarpreference" />
       <recent name="$PROJECT_DIR$/Project5/libs" />
       <recent name="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="nl.hangman.project5" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Project5/libs" />
@@ -579,6 +736,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="058dd581-fb1e-47ea-bace-e6520a6809bf" name="Default" comment="" />
@@ -609,14 +783,21 @@
       <workItem from="1370340598140" duration="93000" />
       <workItem from="1370340768901" duration="2443000" />
       <workItem from="1370344263792" duration="334000" />
-      <workItem from="1370344626157" duration="5933000" />
+      <workItem from="1370344626157" duration="7246000" />
+      <workItem from="1370360174946" duration="5168000" />
+      <workItem from="1370369892814" duration="321000" />
+      <workItem from="1370382306330" duration="132000" />
+      <workItem from="1370420862941" duration="1152000" />
+      <workItem from="1370422044020" duration="9169000" />
+      <workItem from="1370434909876" duration="9000" />
+      <workItem from="1370451082152" duration="18222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52903000" />
+    <option name="totallyTimeSpent" value="88389000" />
   </component>
-  <component name="TodoView" selected-index="0">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -640,24 +821,24 @@
     <frame x="0" y="22" width="1440" height="817" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.7962697" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25968435" sideWeight="0.7962697" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27658045" sideWeight="0.6700143" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25646552" sideWeight="0.6700143" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24425288" sideWeight="0.67862266" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24425288" sideWeight="0.67862266" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20373027" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32137734" sideWeight="0.830703" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31707317" sideWeight="0.17001435" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3543759" sideWeight="0.6506456" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31707317" sideWeight="0.8299857" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31779054" sideWeight="0.7962697" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20373027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31635582" sideWeight="0.68292683" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20086083" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -727,136 +908,140 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_main.xml">
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="42" selection-start="680" selection-end="692" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#733#754#0" expanded="true" />
-            <element signature="e#965#986#0" expanded="true" />
-          </folding>
+        <state line="27" column="19" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="44" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0">
+        <state line="29" column="13" selection-start="1280" selection-end="1280" vertical-scroll-proportion="-7.037037">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="42" selection-start="680" selection-end="692" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#733#754#0" expanded="true" />
-            <element signature="e#965#986#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_preferences.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="41" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/build/res/all/debug/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="45" selection-start="753" selection-end="753" vertical-scroll-proportion="0.47727272">
+        <state line="2" column="68" selection-start="108" selection-end="108" vertical-scroll-proportion="-1.1111112">
           <folding>
-            <element signature="e#1010#1028#0" expanded="true" />
-            <element signature="e#1291#1314#0" expanded="true" />
+            <element signature="e#469#488#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/Project5/build/res/all/debug/xml/preferences.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="54" selection-start="545" selection-end="545" vertical-scroll-proportion="0.425">
+        <state line="12" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.4265403">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/os/ParcelFileDescriptor.class">
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="2926" selection-end="2926" vertical-scroll-proportion="0.0">
+        <state line="18" column="56" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/content/res/AssetManager.class">
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/xml/preferences.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2801" selection-end="2801" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/os/Looper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/os/Handler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="3379" selection-end="3379" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/content/res/Resources.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="0" selection-start="7880" selection-end="7880" vertical-scroll-proportion="0.7916667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="21" column="46" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0">
+        <state line="7" column="41" selection-start="242" selection-end="262" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#733#754#0" expanded="true" />
-            <element signature="e#965#986#0" expanded="true" />
+            <element signature="e#286#311#0" expanded="true" />
+            <element signature="e#336#363#0" expanded="true" />
+            <element signature="e#392#418#0" expanded="true" />
+            <element signature="e#592#595#0" expanded="true" />
+            <element signature="e#661#664#0" expanded="true" />
+            <element signature="e#727#754#0" expanded="true" />
+            <element signature="e#787#815#0" expanded="true" />
+            <element signature="e#1011#1014#0" expanded="true" />
+            <element signature="e#1047#1051#0" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/values/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="54" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
+        <state line="34" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/PreferencesActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+        <state line="17" column="36" selection-start="575" selection-end="594" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/SeekBarDialogPreference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="48" selection-start="263" selection-end="263" vertical-scroll-proportion="0.36830357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project5.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8035714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Hangman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="22" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.4491018">
+        <state line="21" column="27" selection-start="474" selection-end="474" vertical-scroll-proportion="0.703125">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#720#728#0" expanded="true" />
           </folding>
         </state>
       </provider>

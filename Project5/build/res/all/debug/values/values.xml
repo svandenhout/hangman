@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <declare-styleable name="SeekBarDialogPreference">
+        <attr name="maximumValue" format="integer" />
+        <attr name="minimumValue" format="integer" />
+        <attr name="stepSize" format="integer" />
+        <attr name="units" format="string" />
+    </declare-styleable>
+
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <string name="action_settings">Settings</string>
-    <string name="app_name">Project5</string>
-    <string name="currentWord">current word</string>
-    <string name="currentWordState">current word state</string>
-    <string name="usedLetters">used letters</string>
+    <string name="app_name">Hangman</string>
+    <string name="computer_dialogue">computer dialogue</string>
+    <string name="current_word">current word</string>
+    <string name="current_word_state">current word state</string>
+    <string name="dialog_amount_of_turns">amount of turns:</string>
+    <string name="dialog_user_name">user name:</string>
+    <string name="dialog_word_length">word length:</string>
+    <string name="hi_scores">hi-scores</string>
+    <string name="reset">reset game</string>
+    <string name="settings">settings</string>
+    <string name="summary_amount_of_turns">set the amount of turns until you lose</string>
+    <string name="summary_user_name">set your user name here</string>
+    <string name="summary_word_length">set the length of the words that you want to use</string>
+    <string name="title_amount_of_turns">amount of turns</string>
+    <string name="title_user_name">user name</string>
+    <string name="title_word_length">word length</string>
+    <string name="used_letters">used letters</string>
 
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
