@@ -37,8 +37,6 @@ public class MainActivity extends Activity {
     int wordLength;
     int amountOfTurns;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +86,14 @@ public class MainActivity extends Activity {
         usedLetters = hangman.getUsedLetters();
         usedLettersView.setText(usedLetters);
 
+        if(computerMonologue.equals(R.string.game_won)) {
+            resetGame();
+        }
+
+        if(computerMonologue.equals(R.string.game_lost)) {
+            resetGame();
+        }
+
         return true;
     }
 
@@ -109,7 +115,6 @@ public class MainActivity extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
         hangman.chooseRandomWord();
 
