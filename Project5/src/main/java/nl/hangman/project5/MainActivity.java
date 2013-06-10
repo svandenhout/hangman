@@ -1,13 +1,16 @@
 package nl.hangman.project5;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -19,30 +22,41 @@ import nl.hangman.project5.models.Hangman;
 
 public class MainActivity extends Activity {
     private final static String TAG = "MainActivity";
-    Hangman hangman;
-    InputStream wordList;
+    private Hangman hangman;
+    private InputStream wordList;
 
-    String computerMonologue;
-    String currentWord;
-    String currentWordState;
-    String usedLetters;
+    private int userInputState;
+    private String currentWord;
+    private String currentWordState;
 
-    TextView computerMonologueView;
+    private TextView computerMonologueView;
     TextView currentWordView;
     TextView currentWordStateView;
     TextView usedLettersView;
 
     SharedPreferences preferences;
+    boolean changedPrefs;
     String userName;
     int wordLength;
-    int amountOfTurns;
+    int wrongGuesses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        resetGame();
+        Intent intent = getIntent();
+        changedPrefs = intent.getBooleanExtra("changedPrefs", false);
+
+        if(hangman != null) {
+            if(changedPrefs) {
+                newGame();
+            }
+            setupGame();
+        }else {
+            newGame();
+            setupGame();
+        }
     }
 
     @Override
@@ -67,7 +81,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                 return true;
             case R.id.reset:
-                resetGame();
+                setupGame();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -77,34 +91,57 @@ public class MainActivity extends Activity {
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         int key = event.getUnicodeChar();
-        computerMonologue = hangman.doUserInput(key);
-        computerMonologueView.setText(computerMonologue);
+        final Context context = this;
 
-        currentWordState = hangman.getCurrentWordState();
-        currentWordStateView.setText(currentWordState);
+        userInputState = hangman.doUserInput(key);
+        // computerMonologueView.setText(computerMonologue);
 
-        usedLetters = hangman.getUsedLetters();
-        usedLettersView.setText(usedLetters);
+        currentWordStateView.setText(hangman.getCurrentWordState());
 
-        if(computerMonologue.equals(R.string.game_won)) {
-            resetGame();
+        usedLettersView.setText(hangman.getUsedLetters());
+
+        if(userInputState == hangman.GAME_WON) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+
+            alertDialogBuilder.setMessage("YOU WIN!");
+            alertDialogBuilder.setPositiveButton("PLAY AGAIN", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog,int id) {
+                    setupGame();
+                }
+            });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+
+            // show it
+            alertDialog.show();
         }
 
-        if(computerMonologue.equals(R.string.game_lost)) {
-            resetGame();
+        if(userInputState == hangman.GAME_LOST) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+
+            alertDialogBuilder.setMessage("YOU LOSE!");
+            alertDialogBuilder.setPositiveButton("PLAY AGAIN", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog,int id) {
+                    setupGame();
+                }
+            });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+
+            // show it
+            alertDialog.show();
         }
 
         return true;
     }
 
-    private void resetGame() {
+    private void newGame() {
         preferences = getSharedPreferences("hangman_preferences", 0);
         userName = preferences.getString("user_name_preference", "Player 1");
         wordLength = preferences.getInt("word_length_preference", 4);
-        amountOfTurns = preferences.getInt("incorrect_guesses_preference", 10);
+        wrongGuesses = preferences.getInt("incorrect_guesses_preference", 10);
 
-        hangman = new Hangman(userName, wordLength, amountOfTurns);
-        hangman.initEmptyCurrentWordState();
+        hangman = new Hangman(wordLength, wrongGuesses);
 
         try {
             wordList = getResources().openRawResource(R.raw.words);
@@ -115,7 +152,11 @@ public class MainActivity extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    private void setupGame() {
+        hangman.resetValues();
+        hangman.initEmptyCurrentWordState();
         hangman.chooseRandomWord();
 
         currentWord = hangman.getCurrentWord();
@@ -128,7 +169,11 @@ public class MainActivity extends Activity {
 
         currentWordView.setText(currentWord);
         currentWordStateView.setText(currentWordState);
-        usedLettersView.setText(usedLetters);
-        computerMonologueView.setText(computerMonologue);
+        usedLettersView.setText(hangman.getUsedLetters());
+        // computerMonologueView.setText(computerMonologue);
+    }
+
+    private void showAlert(String message) {
+
     }
 }

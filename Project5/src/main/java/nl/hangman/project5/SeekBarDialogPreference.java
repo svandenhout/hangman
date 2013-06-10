@@ -12,6 +12,7 @@ import android.preference.DialogPreference;
 
 import android.util.AttributeSet;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -75,10 +76,7 @@ public class SeekBarDialogPreference extends
 		seekBar = (SeekBar)view.findViewById(R.id.seekbar);
 		valueText = (TextView)view.findViewById(R.id.valueText);
 
-		// Get the persistent value and correct it for the minimum value.
-		value = getPersistedInt(minimumValue) - minimumValue;
-
-		// You're never know...
+		// You never know...
 		if (value < 0) {
 			value = 0;
 		}
@@ -86,6 +84,10 @@ public class SeekBarDialogPreference extends
 		seekBar.setOnSeekBarChangeListener(this);
 		seekBar.setKeyProgressIncrement(stepSize);
 		seekBar.setMax(maximumValue - minimumValue);
+
+        // Get the persistent value and correct it for the minimum value.
+        value = getPersistedInt(minimumValue) - minimumValue;
+        // for some reason value is set to 0 if i getPersistendInt early
 		seekBar.setProgress(value);
 
 		return view;

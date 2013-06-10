@@ -2,8 +2,9 @@
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
 1369914701000 381 b129b276e01126de5b3b753572ac67cbfc19454c /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values-v14/styles.xml
+1370550627000 215 23f7b7b011540f135ed70f47c96f5e3ffda42a55 /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/activity_hi_score.xml
 1369914701000 5237 7761bceaf18ed25cdba5f34bf00a55616d078acf /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/drawable-mdpi/ic_launcher.png
-1370546298000 1326 6ed86d7c00daa126374e44c3537dc1a3545d0dab /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/xml/preferences.xml
+1370610720000 1326 6ed86d7c00daa126374e44c3537dc1a3545d0dab /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/xml/preferences.xml
 1349626751000 6701186 f84bc450899da6e2bcc37e090f43277fd908c373 /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/raw/words.plist
 1349626751000 305 c0f725ea8cdd562127817cd9754e72a26c202585 /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/raw/small.plist
 1369914701000 680 c76f4caaa7a8dfe9727fa93001b3aee3b22d6716 /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values/styles.xml
@@ -15,6 +16,6 @@
 1370511695000 718 b67593d4bd51614b844d8d2925e7ef09e7f59d3c /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/activity_preferences.xml
 1370428296000 550 d52e8011cb88554cc3f426ccc35f894ec981fc2c /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/menu/main.xml
 1369914701000 14383 82acdd75e3fcc36026109406625edc69d4d7212d /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/drawable-xhdpi/ic_launcher.png
-1370515874000 1258 14afa47e813d15a4c24e66a0380ff26c968e7219 /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values/strings.xml
+1370596401000 1388 f2137f8e5bf289d4baeda0bac66024c3f4f0ee5b /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values/strings.xml
 1369914701000 211 4e1904afba59d31e5cd6133f6a4c360fa9a5913f /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values/dimens.xml
 1369914701000 181 84de2797380184d8b39af6f829afb092fb956173 /Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/values-sw600dp/dimens.xml

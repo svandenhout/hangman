@@ -76,6 +76,10 @@
                 </string>
                 <string name="current_word" >current word
                 </string>
+                <string name="game_lost" >game lost
+                </string>
+                <string name="game_won" >game won
+                </string>
                 <string name="current_word_state" >current word state
                 </string>
                 <string name="summary_word_length" >set the length of the words that you want to use
@@ -165,6 +169,11 @@
                 path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/xml/preferences.xml"
                 qualifiers=""
                 type="xml" />
+            <file
+                name="activity_hi_score"
+                path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/activity_hi_score.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/Users/steven/Documents/apps Mprog/project5/Project5/build/res/rs/debug" />
     </dataSet>

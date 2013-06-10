@@ -52,6 +52,8 @@ public class PreferencesActivity extends PreferenceActivity implements
         if(changedPrefs == true) {
             final Context context = this;
             Intent intent = new Intent(context, MainActivity.class);
+
+            intent.putExtra("changedPrefs", true);
             startActivity(intent);
 
             super.onBackPressed();

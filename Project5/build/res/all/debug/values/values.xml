@@ -18,6 +18,8 @@
     <string name="dialog_amount_of_turns">amount of turns:</string>
     <string name="dialog_user_name">user name:</string>
     <string name="dialog_word_length">word length:</string>
+    <string name="game_lost">game lost</string>
+    <string name="game_won">game won</string>
     <string name="hi_scores">hi-scores</string>
     <string name="reset">reset game</string>
     <string name="settings">settings</string>

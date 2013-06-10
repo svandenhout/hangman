@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -18,35 +19,31 @@ import java.util.Random;
 public class Hangman {
     private static final String TAG = "Hangman";
 
-    private String playerName;
+    // all of the game states
+    public static final int ALREADY_USED = 0;
+    public static final int INVALID_INPUT = 1;
+    public static final int WRONG_GUESS = 2;
+    public static final int CORRECT_GUESS = 3;
+    public static final int GAME_WON = 4;
+    public static final int GAME_LOST = 5;
+
+    private static final int MIN_UNICODE_INDEX = 96;
+    private static final int MAX_UNICODE_INDEX = 123;
+
     private int wordLength;
     private int wrongGuesses;
     private int wrongGuessesDone;
-
-    public static final String[] USER_INPUT_STATES = {
-        "already used",
-        "invalid input",
-        "wrong guess",
-        "correct guess",
-        "game won",
-        "game lost"
-    };
-
 
     private ArrayList<String> wordList = new ArrayList<String>() ;
     private String currentWord;
     private String currentWordState;
     private String usedLetters;
-    private String computerMonologue;
 
     // the constructor takes all of the game settings as arguments
-    public Hangman(String playerName, int wordLength, int wrongGuesses) {
-        this.playerName = playerName;
+    public Hangman(int wordLength, int wrongGuesses) {
+
         this.wordLength = wordLength;
         this.wrongGuesses = wrongGuesses;
-
-        Log.d(TAG, playerName);
-
         this.usedLetters = "";
         this.wrongGuessesDone = 0;
     }
@@ -65,24 +62,32 @@ public class Hangman {
     }
 
     // initialises an empty currentWordState variable
+    // TODO: use for each loop / sorry kan niet
     public void initEmptyCurrentWordState() {
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < this.wordLength; i ++) {
             s.append("_");
         }
+
         this.currentWordState = s.toString();
+    }
+
+    // returns XmlPullParser from InputStream
+    private static XmlPullParser parseXml(InputStream is) throws XmlPullParserException {
+        XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+        factory.setNamespaceAware(true);
+        XmlPullParser xpp = factory.newPullParser();
+        xpp.setInput(is, "utf8");
+        return xpp;
     }
 
     // when called fills the wordlist array
     // needs an inputstream as argument
+    // TODO: nieuwe class maken voor xmlPullParser
     public void initList(InputStream is) throws XmlPullParserException, IOException {
         String line;
-        XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-        factory.setNamespaceAware(true);
-        XmlPullParser xpp = factory.newPullParser();
 
-        xpp.setInput(is, "utf8");
-
+        XmlPullParser xpp = parseXml(is);
         int eventType = xpp.getEventType();
         while (eventType != XmlPullParser.END_DOCUMENT) {
             if(eventType == XmlPullParser.TEXT) {
@@ -107,14 +112,15 @@ public class Hangman {
 
     // checks for the validaty of the entered character, the returnvalue refers to a
     // USER_INPUT_STATE
-    public String doUserInput(int key) {
+    // TODO: see if i can make it neat
+    public int doUserInput(int key) {
         StringBuilder s = new StringBuilder();
         char c = (char) key;
 
         // check if input is actually a-z (only lowercase right now)
-        if(key < 96 && key > 123) {
-            // invalid input
-            return USER_INPUT_STATES[1];
+        // TODO: make unicode numbers constants
+        if(key < MIN_UNICODE_INDEX && key > MAX_UNICODE_INDEX) {
+            return INVALID_INPUT;
         }
 
         if(this.usedLetters.indexOf(key) == -1) {
@@ -123,15 +129,16 @@ public class Hangman {
             s.append(c);
             this.usedLetters = s.toString();
 
-
             char[] ca = this.currentWordState.toCharArray();
             int i = 0;
-            while(true) if (this.currentWord.indexOf(key, i) != -1) {
-                i = this.currentWord.indexOf(key, i);
-                ca[i] = c;
-                i++;
-            }else {
-                break;
+            while(true) {
+                if (this.currentWord.indexOf(key, i) != -1) {
+                    i = this.currentWord.indexOf(key, i);
+                    ca[i] = c;
+                    i++;
+                }else {
+                    break;
+                }
             }
 
             // if i is still 0 that means it hasn't incremented inside the while loop
@@ -141,26 +148,26 @@ public class Hangman {
                 this.wrongGuessesDone++;
                 // when true the game is lost
                 if(this.wrongGuessesDone == this.wrongGuesses) {
-                    // lost the game
-                    return USER_INPUT_STATES[5];
+                    return GAME_LOST;
                 }else {
-                    // wrong guess
-                    return USER_INPUT_STATES[2];
+                    return WRONG_GUESS;
                 }
             }else {
                 this.currentWordState = new String(ca);
                 // when true the game is won
                 if(this.currentWordState.equals(this.currentWord)) {
-                    // won the game
-                    return USER_INPUT_STATES[4];
+                    return GAME_WON;
                 }else {
-                    // correct guess
-                    return USER_INPUT_STATES[3];
+                    return CORRECT_GUESS;
                 }
             }
         }else {
-            // letter already used
-            return USER_INPUT_STATES[0];
+            return ALREADY_USED;
         }
+    }
+
+    public void resetValues() {
+        this.usedLetters = "";
+        this.wrongGuessesDone = 0;
     }
 }

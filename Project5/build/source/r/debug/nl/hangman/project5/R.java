@@ -61,8 +61,9 @@ containing a value of this type.
         public static final int valueText=0x7f0a0004;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int activity_preferences=0x7f030001;
+        public static final int activity_hi_score=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_preferences=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -79,16 +80,18 @@ containing a value of this type.
         public static final int dialog_amount_of_turns=0x7f070004;
         public static final int dialog_user_name=0x7f070005;
         public static final int dialog_word_length=0x7f070006;
-        public static final int hi_scores=0x7f070007;
-        public static final int reset=0x7f070008;
-        public static final int settings=0x7f070009;
-        public static final int summary_amount_of_turns=0x7f07000a;
-        public static final int summary_user_name=0x7f07000b;
-        public static final int summary_word_length=0x7f07000c;
-        public static final int title_amount_of_turns=0x7f07000d;
-        public static final int title_user_name=0x7f07000e;
-        public static final int title_word_length=0x7f07000f;
-        public static final int used_letters=0x7f070010;
+        public static final int game_lost=0x7f070007;
+        public static final int game_won=0x7f070008;
+        public static final int hi_scores=0x7f070009;
+        public static final int reset=0x7f07000a;
+        public static final int settings=0x7f07000b;
+        public static final int summary_amount_of_turns=0x7f07000c;
+        public static final int summary_user_name=0x7f07000d;
+        public static final int summary_word_length=0x7f07000e;
+        public static final int title_amount_of_turns=0x7f07000f;
+        public static final int title_user_name=0x7f070010;
+        public static final int title_word_length=0x7f070011;
+        public static final int used_letters=0x7f070012;
     }
     public static final class style {
         /** 
