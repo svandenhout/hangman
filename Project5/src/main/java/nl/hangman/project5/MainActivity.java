@@ -2,12 +2,13 @@ package nl.hangman.project5;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,14 +21,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 
 import nl.hangman.project5.models.Hangman;
 import nl.hangman.project5.models.HiScores;
 
 public class MainActivity extends Activity {
     private final static String TAG = "MainActivity";
+    private final static String FILE_NAME = "appData";
     private Hangman hangman;
     private HiScores hiScores;
     private InputStream wordList;
@@ -53,7 +53,6 @@ public class MainActivity extends Activity {
             setupGame();
         }else {
             newGame();
-            setupGame();
         }
     }
 
@@ -128,7 +127,6 @@ public class MainActivity extends Activity {
                     public void onClick(DialogInterface dialog,int id) {
                         if(changedPrefs) {
                             newGame();
-                            setupGame();
                         }else {
                             setupGame();
                         }
@@ -148,7 +146,6 @@ public class MainActivity extends Activity {
                     public void onClick(DialogInterface dialog,int id) {
                         if(changedPrefs) {
                             newGame();
-                            setupGame();
                         }else {
                             setupGame();
                         }
@@ -169,7 +166,7 @@ public class MainActivity extends Activity {
         super.onStop();
 
         try {
-            FileOutputStream fos = openFileOutput("appData", Context.MODE_PRIVATE);
+            FileOutputStream fos = openFileOutput(FILE_NAME, Context.MODE_PRIVATE);
             hiScores.saveHiScores(fos);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -187,23 +184,16 @@ public class MainActivity extends Activity {
         hangman = new Hangman(wordLength, wrongGuesses);
         hiScores = new HiScores();
 
-        try {
-            wordList = getResources().openRawResource(R.raw.words);
-            hangman.initList(wordList);
-            wordList.close();
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        wordList = getResources().openRawResource(R.raw.words);
+
+        doXmlLoad();
 
         try {
-            FileInputStream fis = openFileInput("appData");
+            FileInputStream fis = openFileInput(FILE_NAME);
             hiScores = new HiScores(fis);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            Log.d("IO_EXCEPTION", "/////////////////////////////////////////////");
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -224,5 +214,49 @@ public class MainActivity extends Activity {
         currentWordStateView.setText(hangman.getCurrentWordState());
         usedLettersView.setText(hangman.getUsedLetters());
         computerMonologueView.setText(R.string.cmonologue_start);
+    }
+
+    /*
+     * doXmlLoad shows progressdialog while the wordList is loaded in the background
+     * after the list is loaded = onPostExecute() it will do setupGame()
+     */
+    private void doXmlLoad() {
+        final Context context = this;
+
+        AsyncTask<Void, Void, Void> asyncTask = new AsyncTask<Void, Void, Void>() {
+            ProgressDialog pd;
+
+            @Override
+            protected void onPreExecute() {
+                pd = new ProgressDialog(context);
+                pd.setTitle("Processing...");
+                pd.setMessage("Please wait.");
+                pd.setCancelable(false);
+                pd.setIndeterminate(true);
+                pd.show();
+            }
+
+            @Override
+            protected Void doInBackground(Void... arg0) {
+                try {
+                    hangman.initList(wordList);
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void result) {
+                pd.dismiss();
+                setupGame();
+            }
+
+
+        };
+        asyncTask.execute((Void[])null);
     }
 }

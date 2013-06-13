@@ -49,7 +49,6 @@ public class HiScoreActivity extends Activity {
         formattedHiScoreList = new String[listLength];
         for(int i = 0; i < listLength; i++) {
             // retrieve the formatted score from the objects
-            Log.d("FORMATTED_SCORE", hiScoreList.get(i).getFormattedScore());
             formattedHiScoreList[i] = hiScoreList.get(i).getFormattedScore();
         }
 

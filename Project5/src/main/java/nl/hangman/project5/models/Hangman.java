@@ -82,7 +82,7 @@ public class Hangman {
     /*
      * returns XmlPullParser from InputStream
      */
-    private static XmlPullParser parseXml(InputStream is) throws XmlPullParserException {
+    protected static XmlPullParser parseXml(InputStream is) throws XmlPullParserException {
         XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
         factory.setNamespaceAware(true);
         XmlPullParser xpp = factory.newPullParser();
