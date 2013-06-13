@@ -21,17 +21,23 @@ public class HiScores {
     Score hiScore;
     private List<Score> hiScoreList;
 
-    //! call when file doesn't exist
+    /*
+     * ! call when file doesn't exist
+     */
     public HiScores() {
         hiScoreList = new ArrayList<Score>();
     }
 
-    //! call when hiScoreList is present
+    /*
+     * ! call when hiScoreList is present
+     */
     public HiScores(List<Score> hsl) {
         hiScoreList = hsl;
     }
 
-    //! call when file exists
+    /*
+     * ! call when file exists
+     */
     public HiScores(FileInputStream fis) throws IOException, ClassNotFoundException {
         ObjectInputStream ois = new ObjectInputStream(fis);
         hiScoreList = (List<Score>) ois.readObject();

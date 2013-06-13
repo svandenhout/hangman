@@ -2,4 +2,6 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/hi_score_item"
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"/>

@@ -31,10 +31,7 @@ public class MainActivity extends Activity {
     private Hangman hangman;
     private HiScores hiScores;
     private InputStream wordList;
-
     private int userInputState;
-    private String currentWord;
-    private String currentWordState;
 
     private TextView computerMonologueView;
     private TextView currentWordView;
@@ -52,13 +49,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = getIntent();
-        changedPrefs = intent.getBooleanExtra("changedPrefs", false);
-
         if(hangman != null) {
-            if(changedPrefs) {
-                newGame();
-            }
             setupGame();
         }else {
             newGame();
@@ -74,6 +65,13 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode == RESULT_OK) {
+            changedPrefs = data.getBooleanExtra("changedPrefs", false);
+        }
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         final Context context = this;
 
@@ -85,7 +83,7 @@ public class MainActivity extends Activity {
                 return true;
             case R.id.settings:
                 Intent startPreferences = new Intent(context, PreferencesActivity.class);
-                startActivity(startPreferences);
+                startActivityForResult(startPreferences, 0);
                 return true;
             case R.id.reset:
                 setupGame();
@@ -101,46 +99,68 @@ public class MainActivity extends Activity {
         final Context context = this;
 
         userInputState = hangman.doUserInput(key);
-        // computerMonologueView.setText(computerMonologue);
 
         currentWordStateView.setText(hangman.getCurrentWordState());
 
         usedLettersView.setText(hangman.getUsedLetters());
 
-        if(userInputState == hangman.GAME_WON) {
-            hiScores.doNewScore(userName, hangman.getWrongGuessesDone());
+        switch(userInputState) {
+            case Hangman.ALREADY_USED:
+                computerMonologueView.setText(R.string.cmonologue_used);
+            break;
+            case Hangman.INVALID_INPUT:
+                computerMonologueView.setText(R.string.cmonologue_invalid);
+                break;
+            case Hangman.WRONG_GUESS:
+                computerMonologueView.setText(R.string.cmonologue_wrong);
+            break;
+            case Hangman.CORRECT_GUESS:
+                computerMonologueView.setText(R.string.cmonologue_correct);
+            break;
+            case Hangman.GAME_WON:
+                computerMonologueView.setText(R.string.cmonologue_won);
+                hiScores.doNewScore(userName, hangman.getWrongGuessesDone());
 
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+                AlertDialog.Builder youWinDialogBuilder = new AlertDialog.Builder(context);
 
-            alertDialogBuilder.setMessage("YOU WIN!");
-            alertDialogBuilder.setPositiveButton("PLAY AGAIN", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog,int id) {
-                    setupGame();
-                }
-            });
+                youWinDialogBuilder.setMessage("YOU WIN!");
+                youWinDialogBuilder.setPositiveButton("PLAY AGAIN", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        if(changedPrefs) {
+                            newGame();
+                            setupGame();
+                        }else {
+                            setupGame();
+                        }
+                    }
+                });
 
-            AlertDialog alertDialog = alertDialogBuilder.create();
+                AlertDialog youWinDialog = youWinDialogBuilder.create();
 
-            // show it
-            alertDialog.show();
+                youWinDialog.show();
+            break;
+            case Hangman.GAME_LOST:
+                computerMonologueView.setText(R.string.cmonologue_lost);
+                AlertDialog.Builder youLostDialogBuilder = new AlertDialog.Builder(context);
+
+                youLostDialogBuilder.setMessage("YOU LOSE!");
+                youLostDialogBuilder.setPositiveButton("PLAY AGAIN", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        if(changedPrefs) {
+                            newGame();
+                            setupGame();
+                        }else {
+                            setupGame();
+                        }
+                    }
+                });
+
+                AlertDialog youLostDialog = youLostDialogBuilder.create();
+
+                youLostDialog.show();
+            break;
+
         }
-
-        if(userInputState == hangman.GAME_LOST) {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-
-            alertDialogBuilder.setMessage("YOU LOSE!");
-            alertDialogBuilder.setPositiveButton("PLAY AGAIN", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog,int id) {
-                    setupGame();
-                }
-            });
-
-            AlertDialog alertDialog = alertDialogBuilder.create();
-
-            // show it
-            alertDialog.show();
-        }
-
         return true;
     }
 
@@ -195,17 +215,14 @@ public class MainActivity extends Activity {
         hangman.initEmptyCurrentWordState();
         hangman.chooseRandomWord();
 
-        currentWord = hangman.getCurrentWord();
-        currentWordState = hangman.getCurrentWordState();
-
         currentWordView = (TextView) findViewById(R.id.currentWord);
         currentWordStateView = (TextView) findViewById(R.id.currentWordState);
         usedLettersView = (TextView) findViewById(R.id.usedLetters);
         computerMonologueView = (TextView) findViewById(R.id.computerDialogue);
 
-        currentWordView.setText(currentWord);
-        currentWordStateView.setText(currentWordState);
+        currentWordView.setText(hangman.getCurrentWord());
+        currentWordStateView.setText(hangman.getCurrentWordState());
         usedLettersView.setText(hangman.getUsedLetters());
-        // computerMonologueView.setText(computerMonologue);
+        computerMonologueView.setText(R.string.cmonologue_start);
     }
 }

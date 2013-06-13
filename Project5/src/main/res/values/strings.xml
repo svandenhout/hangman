@@ -47,4 +47,13 @@
     </string>
     <string name="game_lost">game lost
     </string>
+
+    <!-- computer monologue -->
+    <string name="cmonologue_start">Pick a letter to start playing</string>
+    <string name="cmonologue_used">This letter has already been used, try again</string>
+    <string name="cmonologue_invalid">WHAT THE HELL IS THAT!?, try another one</string>
+    <string name="cmonologue_wrong">Wrong guess, pick again</string>
+    <string name="cmonologue_correct">Lucky, why don\'t you try again?</string>
+    <string name="cmonologue_won">:((</string>
+    <string name="cmonologue_lost">:-)</string>
 </resources>

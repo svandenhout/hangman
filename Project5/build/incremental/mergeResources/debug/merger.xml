@@ -19,6 +19,11 @@
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="activity_hi_score"
+                path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/activity_hi_score.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_main"
                 path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/activity_main.xml"
                 qualifiers=""
@@ -26,6 +31,11 @@
             <file
                 name="activity_preferences"
                 path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/activity_preferences.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="simple_list_item_1"
+                path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/simple_list_item_1.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -74,41 +84,55 @@
                 qualifiers="" >
                 <string name="dialog_amount_of_turns" >amount of turns:
                 </string>
+                <string name="cmonologue_start" >Pick a letter to start playing
+                </string>
                 <string name="current_word" >current word
                 </string>
                 <string name="game_lost" >game lost
                 </string>
-                <string name="game_won" >game won
-                </string>
-                <string name="current_word_state" >current word state
+                <string name="cmonologue_won" >:((
                 </string>
                 <string name="summary_word_length" >set the length of the words that you want to use
                 </string>
                 <string name="title_amount_of_turns" >amount of turns
                 </string>
+                <string name="cmonologue_invalid" >WHAT THE HELL IS THAT!?, try another one
+                </string>
                 <string name="hi_scores" >hi-scores
                 </string>
                 <string name="summary_amount_of_turns" >set the amount of turns until you lose
-                </string>
-                <string name="summary_user_name" >set your user name here
-                </string>
-                <string name="computer_dialogue" >computer dialogue
-                </string>
-                <string name="settings" >settings
                 </string>
                 <string name="used_letters" >used letters
                 </string>
                 <string name="dialog_word_length" >word length:
                 </string>
+                <string name="title_word_length" >word length
+                </string>
+                <string name="title_user_name" >user name
+                </string>
+                <string name="cmonologue_wrong" >Wrong guess, pick again
+                </string>
+                <string name="game_won" >game won
+                </string>
+                <string name="current_word_state" >current word state
+                </string>
+                <string name="cmonologue_lost" >:-)
+                </string>
+                <string name="summary_user_name" >set your user name here
+                </string>
+                <string name="cmonologue_correct" >Lucky, why don\'t you try again?
+                </string>
+                <string name="computer_dialogue" >computer dialogue
+                </string>
+                <string name="cmonologue_used" >This letter has already been used, try again
+                </string>
+                <string name="settings" >settings
+                </string>
                 <string name="app_name" >Hangman
                 </string>
                 <string name="dialog_user_name" >user name:
                 </string>
-                <string name="title_word_length" >word length
-                </string>
                 <string name="reset" >reset game
-                </string>
-                <string name="title_user_name" >user name
                 </string>
             </file>
             <file
@@ -169,16 +193,6 @@
                 path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/xml/preferences.xml"
                 qualifiers=""
                 type="xml" />
-            <file
-                name="activity_hi_score"
-                path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/activity_hi_score.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="simple_list_item_1"
-                path="/Users/steven/Documents/apps Mprog/project5/Project5/src/main/res/layout/simple_list_item_1.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="/Users/steven/Documents/apps Mprog/project5/Project5/build/res/rs/debug" />
     </dataSet>

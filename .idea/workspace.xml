@@ -89,40 +89,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SeekBarDialogPreference.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/SeekBarDialogPreference.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="7" selection-start="3140" selection-end="3140" vertical-scroll-proportion="0.0" vertical-offset="1465" max-vertical-offset="1905">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="43" selection-start="1509" selection-end="1509" vertical-scroll-proportion="-6.923077" vertical-offset="225" max-vertical-offset="2820">
-              <folding />
+            <state line="162" column="9" selection-start="5513" selection-end="5513" vertical-scroll-proportion="0.71611255" vertical-offset="1790" max-vertical-offset="3135">
+              <folding>
+                <element signature="e#3292#3316#0" expanded="true" />
+                <element signature="e#3424#3451#0" expanded="true" />
+                <element signature="e#3561#3586#0" expanded="true" />
+                <element signature="e#3694#3721#0" expanded="true" />
+                <element signature="e#3824#3847#0" expanded="true" />
+                <element signature="e#4150#4524#0" expanded="true" />
+                <element signature="e#4505#4506#0" expanded="true" />
+                <element signature="e#4740#4764#0" expanded="true" />
+                <element signature="e#4992#5366#0" expanded="true" />
+                <element signature="e#5347#5348#0" expanded="true" />
+                <element signature="e#7741#7766#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project5/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HiScores.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HiScores.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/HiScores.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="23" selection-start="493" selection-end="493" vertical-scroll-proportion="0.64028776" vertical-offset="3" max-vertical-offset="1110">
+            <state line="24" column="7" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1260">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1445#1851#0" expanded="true" />
+                <element signature="e#1840#1841#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Score.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Score.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="33" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,7 +135,7 @@
       <file leaf-file-name="Hangman.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Hangman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2730">
+            <state line="16" column="3" selection-start="404" selection-end="404" vertical-scroll-proportion="50.840908" vertical-offset="2477" max-vertical-offset="2850">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,10 +143,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project5/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="0" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0" vertical-offset="443" max-vertical-offset="975">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="HiScoreActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/HiScoreActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+            <state line="20" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="333" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -150,7 +164,7 @@
       <file leaf-file-name="PreferencesActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/PreferencesActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="56" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+            <state line="53" column="31" selection-start="1589" selection-end="1598" vertical-scroll-proportion="0.0" vertical-offset="498" max-vertical-offset="930">
               <folding />
             </state>
           </provider>
@@ -159,7 +173,7 @@
       <file leaf-file-name="simple_list_item_1.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/simple_list_item_1.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="45" selection-start="236" selection-end="236" vertical-scroll-proportion="-2.2222223" vertical-offset="0" max-vertical-offset="150">
+            <state line="6" column="41" selection-start="318" selection-end="318" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -172,18 +186,6 @@
         <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="35" column="50" selection-start="1575" selection-end="1575" vertical-scroll-proportion="-5.740741" vertical-offset="370" max-vertical-offset="795">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_hi_score.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_hi_score.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="46" selection-start="338" selection-end="338" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -233,22 +235,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/seekbarpreference/SeekBarDialogPreference.java" />
         <option value="$PROJECT_DIR$/Project5/src/main/res/values/attrs.xml" />
         <option value="$PROJECT_DIR$/Project5/build/res/all/debug/xml/preferences.xml" />
         <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/Project5/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/PreferencesActivity.java" />
         <option value="$PROJECT_DIR$/Project5/src/main/res/xml/preferences.xml" />
         <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/SeekBarDialogPreference.java" />
         <option value="$PROJECT_DIR$/Project5/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Score.java" />
-        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/MainActivity.java" />
-        <option value="$PROJECT_DIR$/Project5/src/main/res/layout/simple_list_item_1.xml" />
         <option value="$PROJECT_DIR$/Project5/src/main/res/layout/activity_hi_score.xml" />
-        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Hangman.java" />
         <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/HiScoreActivity.java" />
+        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Score.java" />
+        <option value="$PROJECT_DIR$/Project5/src/main/res/layout/simple_list_item_1.xml" />
+        <option value="$PROJECT_DIR$/Project5/build/res/all/debug/values/values.xml" />
+        <option value="$PROJECT_DIR$/Project5/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/HiScores.java" />
+        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Hangman.java" />
+        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/PreferencesActivity.java" />
+        <option value="$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -952,33 +954,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_preferences.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="50" selection-start="212" selection-end="212" vertical-scroll-proportion="0.14117648" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="36" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/content/ContextWrapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="182" column="0" selection-start="10682" selection-end="10682" vertical-scroll-proportion="1.5" vertical-offset="2319" max-vertical-offset="2805" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/SeekBarDialogPreference.java">
@@ -1009,6 +987,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_hi_score.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="46" selection-start="338" selection-end="338" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="50" selection-start="1575" selection-end="1575" vertical-scroll-proportion="-5.740741" vertical-offset="370" max-vertical-offset="795">
@@ -1021,7 +1009,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/simple_list_item_1.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="45" selection-start="236" selection-end="236" vertical-scroll-proportion="-2.2222223" vertical-offset="0" max-vertical-offset="150">
+        <state line="6" column="41" selection-start="318" selection-end="318" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="180">
           <folding />
         </state>
       </provider>
@@ -1029,51 +1017,76 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/layout/activity_hi_score.xml">
+    <entry file="file://$PROJECT_DIR$/Project5/build/res/all/debug/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="46" selection-start="338" selection-end="338" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/PreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="56" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+        <state line="14" column="79" selection-start="576" selection-end="576" vertical-scroll-proportion="-0.59574467" vertical-offset="462" max-vertical-offset="885">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="43" selection-start="1509" selection-end="1509" vertical-scroll-proportion="-6.923077" vertical-offset="225" max-vertical-offset="2820">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Hangman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2730">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/HiScoreActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+        <state line="24" column="33" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/HiScores.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="493" selection-end="493" vertical-scroll-proportion="0.64028776" vertical-offset="3" max-vertical-offset="1110">
+        <state line="24" column="7" selection-start="615" selection-end="615" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1260">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1445#1851#0" expanded="true" />
+            <element signature="e#1840#1841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/models/Hangman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="3" selection-start="404" selection-end="404" vertical-scroll-proportion="50.840908" vertical-offset="2477" max-vertical-offset="2850">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0" vertical-offset="443" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/HiScoreActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="3" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="333" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/PreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="31" selection-start="1589" selection-end="1598" vertical-scroll-proportion="0.0" vertical-offset="498" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project5/src/main/java/nl/hangman/project5/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="9" selection-start="5513" selection-end="5513" vertical-scroll-proportion="0.71611255" vertical-offset="1790" max-vertical-offset="3135">
+          <folding>
+            <element signature="e#3292#3316#0" expanded="true" />
+            <element signature="e#3424#3451#0" expanded="true" />
+            <element signature="e#3561#3586#0" expanded="true" />
+            <element signature="e#3694#3721#0" expanded="true" />
+            <element signature="e#3824#3847#0" expanded="true" />
+            <element signature="e#4150#4524#0" expanded="true" />
+            <element signature="e#4505#4506#0" expanded="true" />
+            <element signature="e#4740#4764#0" expanded="true" />
+            <element signature="e#4992#5366#0" expanded="true" />
+            <element signature="e#5347#5348#0" expanded="true" />
+            <element signature="e#7741#7766#0" expanded="true" />
           </folding>
         </state>
       </provider>

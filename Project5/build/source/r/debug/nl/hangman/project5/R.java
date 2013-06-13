@@ -77,24 +77,31 @@ containing a value of this type.
     }
     public static final class string {
         public static final int app_name=0x7f070000;
-        public static final int computer_dialogue=0x7f070001;
-        public static final int current_word=0x7f070002;
-        public static final int current_word_state=0x7f070003;
-        public static final int dialog_amount_of_turns=0x7f070004;
-        public static final int dialog_user_name=0x7f070005;
-        public static final int dialog_word_length=0x7f070006;
-        public static final int game_lost=0x7f070007;
-        public static final int game_won=0x7f070008;
-        public static final int hi_scores=0x7f070009;
-        public static final int reset=0x7f07000a;
-        public static final int settings=0x7f07000b;
-        public static final int summary_amount_of_turns=0x7f07000c;
-        public static final int summary_user_name=0x7f07000d;
-        public static final int summary_word_length=0x7f07000e;
-        public static final int title_amount_of_turns=0x7f07000f;
-        public static final int title_user_name=0x7f070010;
-        public static final int title_word_length=0x7f070011;
-        public static final int used_letters=0x7f070012;
+        public static final int cmonologue_correct=0x7f070001;
+        public static final int cmonologue_invalid=0x7f070002;
+        public static final int cmonologue_lost=0x7f070003;
+        public static final int cmonologue_start=0x7f070004;
+        public static final int cmonologue_used=0x7f070005;
+        public static final int cmonologue_won=0x7f070006;
+        public static final int cmonologue_wrong=0x7f070007;
+        public static final int computer_dialogue=0x7f070008;
+        public static final int current_word=0x7f070009;
+        public static final int current_word_state=0x7f07000a;
+        public static final int dialog_amount_of_turns=0x7f07000b;
+        public static final int dialog_user_name=0x7f07000c;
+        public static final int dialog_word_length=0x7f07000d;
+        public static final int game_lost=0x7f07000e;
+        public static final int game_won=0x7f07000f;
+        public static final int hi_scores=0x7f070010;
+        public static final int reset=0x7f070011;
+        public static final int settings=0x7f070012;
+        public static final int summary_amount_of_turns=0x7f070013;
+        public static final int summary_user_name=0x7f070014;
+        public static final int summary_word_length=0x7f070015;
+        public static final int title_amount_of_turns=0x7f070016;
+        public static final int title_user_name=0x7f070017;
+        public static final int title_word_length=0x7f070018;
+        public static final int used_letters=0x7f070019;
     }
     public static final class style {
         /** 

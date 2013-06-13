@@ -1,7 +1,5 @@
 package nl.hangman.project5.models;
 
-import android.util.Log;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -10,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -41,7 +38,9 @@ public class Hangman {
     private String currentWordState;
     private String usedLetters;
 
-    // the constructor takes all of the game settings as arguments
+    /*
+     * the constructor takes all of the game settings as arguments
+     */
     public Hangman(int wordLength, int wrongGuesses) {
         this.wordLength = wordLength;
         this.wrongGuesses = wrongGuesses;
@@ -49,7 +48,9 @@ public class Hangman {
         this.wrongGuessesDone = 0;
     }
 
-    // returns the current word (the one that will be played with)
+    /*
+     * returns the current word (the one that will be played with)
+     */
     public String getCurrentWord() {
         return this.currentWord;
     }
@@ -65,8 +66,10 @@ public class Hangman {
     public int getWrongGuessesDone() {
         return this.wrongGuessesDone;
     }
-    // initialises an empty currentWordState variable
-    // TODO: use for each loop / sorry kan niet
+
+    /*
+     * initialises an empty currentWordState variable
+     */
     public void initEmptyCurrentWordState() {
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < this.wordLength; i ++) {
@@ -76,7 +79,9 @@ public class Hangman {
         this.currentWordState = s.toString();
     }
 
-    // returns XmlPullParser from InputStream
+    /*
+     * returns XmlPullParser from InputStream
+     */
     private static XmlPullParser parseXml(InputStream is) throws XmlPullParserException {
         XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
         factory.setNamespaceAware(true);
@@ -85,9 +90,10 @@ public class Hangman {
         return xpp;
     }
 
-    // when called fills the wordlist array
-    // needs an inputstream as argument
-    // TODO: nieuwe class maken voor xmlPullParser
+    /*
+     * when called fills the wordlist array
+     * needs an inputstream as argument
+     */
     public void initList(InputStream is) throws XmlPullParserException, IOException {
         String line;
 
@@ -107,25 +113,21 @@ public class Hangman {
         is.close();
     }
 
-    // uses Pseudorandomness to pick and set the current word from the wordlist
+    /*
+     * uses Pseudorandomness to pick and set the current word from the wordlist
+     */
     public void chooseRandomWord() {
         Random random = new Random();
         int number = random.nextInt(this.wordList.size());
         this.currentWord = this.wordList.get(number);
     }
 
-    // checks for the validaty of the entered character, the returnvalue refers to a
-    // USER_INPUT_STATE
-    // TODO: see if i can make it neat
+    /*
+     * checks for the validaty of the entered character
+     */
     public int doUserInput(int key) {
         StringBuilder s = new StringBuilder();
         char c = (char) key;
-
-        // check if input is actually a-z (only lowercase right now)
-        // TODO: make unicode numbers constants
-        if(key < MIN_UNICODE_INDEX && key > MAX_UNICODE_INDEX) {
-            return INVALID_INPUT;
-        }
 
         if(this.usedLetters.indexOf(key) == -1) {
 
@@ -145,14 +147,20 @@ public class Hangman {
                 }
             }
 
-            // if i is still 0 that means it hasn't incremented inside the while loop
-            // that means a correct match has not been found
+            /*
+             * if i is still 0 that means it hasn't incremented inside the while loop
+             * that means a correct match has not been found
+             */
             if(i == 0) {
                 // wrong guess
                 this.wrongGuessesDone++;
                 // when true the game is lost
                 if(this.wrongGuessesDone == this.wrongGuesses) {
                     return GAME_LOST;
+                // check if input is actually a-z (only lowercase right now) (it's always a wrong
+                // guess)
+                }else if(key < MIN_UNICODE_INDEX && key > MAX_UNICODE_INDEX){
+                    return INVALID_INPUT;
                 }else {
                     return WRONG_GUESS;
                 }

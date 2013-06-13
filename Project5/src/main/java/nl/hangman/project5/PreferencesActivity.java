@@ -46,15 +46,12 @@ public class PreferencesActivity extends PreferenceActivity implements
         changedPrefs = true;
     }
 
-    // overrides the back button so the game is reset (hopefully)
     @Override
     public void onBackPressed() {
         if(changedPrefs == true) {
-            final Context context = this;
-            Intent intent = new Intent(context, MainActivity.class);
-
-            intent.putExtra("changedPrefs", true);
-            startActivity(intent);
+            Intent data = new Intent();
+            data.putExtra("changedPrefs", true);
+            setResult(RESULT_OK, data);
 
             super.onBackPressed();
         }else {

@@ -3,6 +3,8 @@ package nl.hangman.project5.models;
 import java.io.Serializable;
 
 /**
+ * Creates a score object with the ability to format the username & score into a string
+ *
  * Created by steven on 6/10/13.
  */
 public class Score implements Serializable {

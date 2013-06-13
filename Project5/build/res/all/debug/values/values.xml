@@ -12,6 +12,13 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <string name="app_name">Hangman</string>
+    <string name="cmonologue_correct">Lucky, why don\'t you try again?</string>
+    <string name="cmonologue_invalid">WHAT THE HELL IS THAT!?, try another one</string>
+    <string name="cmonologue_lost">:-)</string>
+    <string name="cmonologue_start">Pick a letter to start playing</string>
+    <string name="cmonologue_used">This letter has already been used, try again</string>
+    <string name="cmonologue_won">:((</string>
+    <string name="cmonologue_wrong">Wrong guess, pick again</string>
     <string name="computer_dialogue">computer dialogue</string>
     <string name="current_word">current word</string>
     <string name="current_word_state">current word state</string>
