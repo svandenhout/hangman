@@ -24,9 +24,12 @@
         </activity>
         <activity
             android:name="nl.hangman.project5.PreferencesActivity"
-            android:label="preferences">
+            android:label="Preferences">
         </activity>
-        <activity android:name=".HiScoreActivity"/>
+        <activity
+            android:name="nl.hangman.project5.HiScoreActivity"
+            android:label="HiScores">
+        </activity>
     </application>
 
 </manifest>

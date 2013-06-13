@@ -7,22 +7,29 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParserException;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 import nl.hangman.project5.models.Hangman;
+import nl.hangman.project5.models.HiScores;
 
 public class MainActivity extends Activity {
     private final static String TAG = "MainActivity";
     private Hangman hangman;
+    private HiScores hiScores;
     private InputStream wordList;
 
     private int userInputState;
@@ -30,15 +37,15 @@ public class MainActivity extends Activity {
     private String currentWordState;
 
     private TextView computerMonologueView;
-    TextView currentWordView;
-    TextView currentWordStateView;
-    TextView usedLettersView;
+    private TextView currentWordView;
+    private TextView currentWordStateView;
+    private TextView usedLettersView;
 
-    SharedPreferences preferences;
-    boolean changedPrefs;
-    String userName;
-    int wordLength;
-    int wrongGuesses;
+    private SharedPreferences preferences;
+    private boolean changedPrefs;
+    private String userName;
+    private int wordLength;
+    private int wrongGuesses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,16 +76,16 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         final Context context = this;
-        Intent intent;
 
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.hiScores:
-
+                Intent startHiScore = new Intent(context, HiScoreActivity.class);
+                startActivity(startHiScore);
                 return true;
             case R.id.settings:
-                intent = new Intent(context, PreferencesActivity.class);
-                startActivity(intent);
+                Intent startPreferences = new Intent(context, PreferencesActivity.class);
+                startActivity(startPreferences);
                 return true;
             case R.id.reset:
                 setupGame();
@@ -101,6 +108,8 @@ public class MainActivity extends Activity {
         usedLettersView.setText(hangman.getUsedLetters());
 
         if(userInputState == hangman.GAME_WON) {
+            hiScores.doNewScore(userName, hangman.getWrongGuessesDone());
+
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 
             alertDialogBuilder.setMessage("YOU WIN!");
@@ -135,6 +144,20 @@ public class MainActivity extends Activity {
         return true;
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        try {
+            FileOutputStream fos = openFileOutput("appData", Context.MODE_PRIVATE);
+            hiScores.saveHiScores(fos);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void newGame() {
         preferences = getSharedPreferences("hangman_preferences", 0);
         userName = preferences.getString("user_name_preference", "Player 1");
@@ -142,6 +165,7 @@ public class MainActivity extends Activity {
         wrongGuesses = preferences.getInt("incorrect_guesses_preference", 10);
 
         hangman = new Hangman(wordLength, wrongGuesses);
+        hiScores = new HiScores();
 
         try {
             wordList = getResources().openRawResource(R.raw.words);
@@ -150,6 +174,18 @@ public class MainActivity extends Activity {
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            FileInputStream fis = openFileInput("appData");
+            hiScores = new HiScores(fis);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            Log.d("IO_EXCEPTION", "/////////////////////////////////////////////");
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
@@ -171,9 +207,5 @@ public class MainActivity extends Activity {
         currentWordStateView.setText(currentWordState);
         usedLettersView.setText(hangman.getUsedLetters());
         // computerMonologueView.setText(computerMonologue);
-    }
-
-    private void showAlert(String message) {
-
     }
 }

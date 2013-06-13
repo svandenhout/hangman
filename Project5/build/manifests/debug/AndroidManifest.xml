@@ -10,9 +10,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:label="preferences" android:name="nl.hangman.project5.PreferencesActivity">
+        <activity android:label="Preferences" android:name="nl.hangman.project5.PreferencesActivity">
         </activity>
-        <activity android:name="nl.hangman.project5.HiScoreActivity"/>
+        <activity android:label="HiScores" android:name="nl.hangman.project5.HiScoreActivity">
+        </activity>
     </application>
 
 </manifest>

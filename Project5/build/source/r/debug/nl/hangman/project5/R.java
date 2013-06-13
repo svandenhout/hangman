@@ -50,20 +50,23 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int computerDialogue=0x7f0a0001;
-        public static final int currentWord=0x7f0a0002;
-        public static final int currentWordState=0x7f0a0003;
-        public static final int hiScores=0x7f0a0006;
-        public static final int reset=0x7f0a0008;
-        public static final int seekbar=0x7f0a0005;
-        public static final int settings=0x7f0a0007;
-        public static final int usedLetters=0x7f0a0000;
-        public static final int valueText=0x7f0a0004;
+        public static final int computerDialogue=0x7f0a0002;
+        public static final int currentWord=0x7f0a0003;
+        public static final int currentWordState=0x7f0a0004;
+        public static final int hiScores=0x7f0a0008;
+        public static final int hi_score_item=0x7f0a0007;
+        public static final int hi_score_list=0x7f0a0000;
+        public static final int reset=0x7f0a000a;
+        public static final int seekbar=0x7f0a0006;
+        public static final int settings=0x7f0a0009;
+        public static final int usedLetters=0x7f0a0001;
+        public static final int valueText=0x7f0a0005;
     }
     public static final class layout {
         public static final int activity_hi_score=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int activity_preferences=0x7f030002;
+        public static final int simple_list_item_1=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f090000;

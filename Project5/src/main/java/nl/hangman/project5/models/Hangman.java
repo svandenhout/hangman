@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
+ * The hangman class covers all of the aspects to actually play the game of hangman,
+ *
  * Created by steven on 5/28/13.
  */
 public class Hangman {
@@ -41,7 +43,6 @@ public class Hangman {
 
     // the constructor takes all of the game settings as arguments
     public Hangman(int wordLength, int wrongGuesses) {
-
         this.wordLength = wordLength;
         this.wrongGuesses = wrongGuesses;
         this.usedLetters = "";
@@ -61,6 +62,9 @@ public class Hangman {
         return this.usedLetters;
     }
 
+    public int getWrongGuessesDone() {
+        return this.wrongGuessesDone;
+    }
     // initialises an empty currentWordState variable
     // TODO: use for each loop / sorry kan niet
     public void initEmptyCurrentWordState() {
